@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../css/Legou-top-button.css" />
+		<link rel="stylesheet" type="text/css" href="../css/person_mess.css" />
+	</head>
+
+	<body>
+		<div id="offside"></div>
+		<div id="person_mess"></div>
+		<!--<div id="header"></div>-->
+		<!--//导航栏-->
+		<div id="nav">
+			<div class="nav_auto">
+				<a href="#">
+					<img src="../img/logo.png" />
+					<div>
+						<i>乐 购</i><br />
+						<i>每日快乐一购</i>
+					</div>
+				</a>
+				<div class="nav_content">
+					<div class="nav_content_top">
+						<!--search搜索框-->
+						<div class="search">
+							<div class="select">
+								<span>搜商品</span>
+							</div>
+							<div id="top_nav_form">
+								<input type="text" class="search1" placeholder="夏季女士短袖" />
+								<input type="submit" value="搜 索" class="search2" />
+							</div>
+						</div>
+					</div>
+					<div class="nav_top_word">
+						<a href="#">春季套装</a>
+						<a href="#">卫衣</a>
+						<a href="#">牛仔裤</a>
+						<a href="#">打底衫</a>
+						<a href="#">单鞋</a>
+						<a href="#">打底裤</a>
+						<a href="#">斜挎包</a>
+						<a href="#">棒球服</a>
+						<a href="#">连衣裙</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="per_cont " style="overflow: hidden;">
+			<div class="per_cont_nav le ">
+				<div class="per_img">
+					<div>
+						<img src="" class="portrait" width="110px" height="110px"/>
+					</div>
+					<p class="current_user"></p>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">我的订单></div>
+					<ul class="per_nav_item d_none">
+						<li>
+							<a href="#">全部订单</a>
+						</li>
+						<li>
+							<a href="#">待付款</a>
+						</li>
+						<li>
+							<a href="#">待收货</a>
+						</li>
+						<li>
+							<a href="#">待评价</a>
+						</li>
+						<li>
+							<a href="#">退货退款</a>
+						</li>
+						<li>
+							<a href="#">订单回收站</a>
+						</li>
+					</ul>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">
+						<a href="#">我的钱包></a>
+					</div>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">
+						<a href="#">我的理财></a>
+					</div>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">
+						<a href="#">优惠特权></a>
+					</div>
+					<ul class="per_nav_item d_none">
+						<li>
+							<a href="#">会员中心</a>
+						</li>
+						<li>
+							<a href="#">店铺优惠卷</a>
+						</li>
+						<li>
+							<a href="#">现金卷</a>
+						</li>
+					</ul>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">
+						<a href="#">地址管理></a>
+					</div>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">
+						<a href="#">安全设置></a>
+					</div>
+					<ul class="per_nav_item d_none">
+						<li>
+							<a href="#" class="set_pass">设置密码</a>
+						</li>
+						<li>
+							<a href="#">绑定手机</a>
+						</li>
+						<li>
+							<a href="#">数字证书</a>
+						</li>
+					</ul>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">
+						<a href="#">维权管理></a>
+					</div>
+					<ul class="per_nav_item d_none">
+						<li>
+							<a href="#">投诉管理</a>
+						</li>
+						<li>
+							<a href="#">举报管理</a>
+						</li>
+					</ul>
+				</div>
+				<div class="per_img_mess">
+					<div class="per_title">帐号设置></div>
+					<ul class="per_nav_item d_none">
+						<li>
+							<a href="#" class="basic_mess">基本信息</a>
+						</li>
+						<li>
+							<a href="#">修改头像</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="per_right_cont le d_block">
+				<div class="per_box">
+					<span class="basic_data">基本资料</span>
+					<div class="setting_form">
+						<form class="sett" id="sett">
+							<div class="per_username">
+								<span class="nickname">昵称:</span>
+								<span class="current_user">一个人的独白</span>
+								<span>*如需更改内容用户名可前往乐购客户端操作</span>
+							</div>
+							<div class="per_sex">
+								<span class="nickname">性别:</span>
+								<input type="radio" value="女" name="sex" />女 <input type="radio" value="男" name="sex" />男
+							</div>
+							<div class="home">
+								<span class="nickname">所在地:</span>
+								<select name="provinces" class="provinces">
+
+								</select>
+								<select name="city" class="city">
+
+								</select>
+							</div>
+							<div class="birthday">
+								<span class="nickname">生日:</span>
+								<select name="year" id="year" onChange="swap_day()" class="year"></select>年
+								<select name="month" id="month" onChange="swap_day()" class="month"></select>月
+								<select name="day" id="day" class="day"></select>日
+							</div>
+							<div class="professional">
+								<span class="nickname">职业:</span>
+								<select class="job" name="job">
+									<option value=""></option>
+									<option value="白领">白领</option>
+									<option value="学生">学生</option>
+									<option value="时尚妈咪">时尚妈咪</option>
+									<option value="时尚店主">时尚店主</option>
+									<option value="传媒">传媒</option>
+									<option value="艺术">艺术</option>
+									<option value="其他">其他</option>
+								</select>
+							</div>
+							<span class="other_infor">其他信息</span>
+							<div class="introduce_myself">
+								<span>自我介绍:</span>
+								<textarea name="introduce" rows="10" class="write" placeholder="随便写点什么吧，让大家了解下你吧" value=""></textarea>
+							</div>
+							<div class="modify_succes">
+								<input type="button" value="修改完成" class="modify_succ" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="per_cont_pass le d_none">
+				<div class="main_cont">
+					<div>用户密码</div>
+					<div class="per_cont_form">
+						<form action="post">
+							<p class="current_pass">
+								<span>当前密码:</span><input type="password" class="old_passwrod" />
+							</p>
+							<p class="new_pass">
+								<span>新密码:</span><input type="password" class="new_password" />
+							</p>
+							<p class="confirm_pass">
+								<span>确认密码:</span><input type="password" class="confirmPass" />
+							</p>
+							<p class="tip d_none"></p>
+						</form>
+					</div>
+					<div class="per_button">
+						<button class="con_submit">确认</button>
+					</div>
+				</div>
+			</div>
+			<div class="shippAddress le d_none">
+				<h2>地址管理</h2>
+				<div class="addr">
+					<div class="add_addres">
+						<span class="addAddres">+添加新地址</span>
+					</div>
+					<div class="addr_box d_none">
+						<form class="delivery">
+							<div class="prov_city">
+								<span>省:*</span>
+								<select name="prov" id="" class="prov"></select>
+								<span>市</span>
+								<select name="provCity" id="" class="provCity"></select>
+								<span>区</span>
+								<select name="provCityArea" id="" class="provCityArea"></select>
+							</div>
+							<div class="postal"><span>邮政编码:*</span><input type="text" class="zipcode" name="zipcode" /></div>
+							<div class="street" style="overflow: hidden;">
+								<span class="le">街道地址:*</span>
+								<textarea name="textStreet" rows="5" cols="80" class="textStreet le" placeholder="请输入你的街道地址"></textarea>
+							</div>
+							<p>请填写街道地址，最少5个字，至多20个字</p>
+							<div class="consignee"><span>收货人姓名:*</span><input type="text" class="name" name="name" /></div>
+							<div class="phone"><span>手机:*</span><input type="text" class="phone2" name="phone2" /></div>
+							<p class="checkError d_none">你输入的信息有误</p>
+							<div class="cancel">
+								<a href="#" class="create_addres">确认地址</a>
+								<a href="#" class="cancel_create">取消</a>
+							</div>
+						</form>
+					</div>
+					<div class="shippaddresses">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+
+		<script src="../js/bmob.js"></script>
+		<script src="../js/bmob-min.js"></script>
+		<script src="../js/legou-background.js"></script>
+		<script src="../js/Legou-top-button.js"></script>
+		<script src="../js/person_mess.js"></script>
+		<script src="../js/city.js"></script>
+		<script src="../js/offside_head_fixed.js"></script>
+		<script type="text/javascript">
+			var search2=document.getElementsByClassName('search2')[0];
+			var search1=document.querySelector('.search1');
+			search2.onclick=function(){
+				var keyword = encodeURI(search1.value);
+				console.log("value"+keyword,search1);
+				window.open('../mashroomStreet/search.html?keyword='+keyword);
+			}
+		</script>
+<script type="text/javascript">
+	LGB.init();
+	//顶部
+	var btop =new LeguTop("person_mess");
+	// btop.LeguTopStyle();
+	// btop.Lgougouwu("../home_page/legou.html");
+	var user = LGB.getCurrentUser();
+	
+	//侧边栏
+	var a = new Offside("offside","###","###","###","###");
+	a.OffsideStyle();
+	//获取当前用户信息,,,没有头像
+	var current_user = document.getElementsByClassName("current_user");
+	var portrait = document.getElementsByClassName("portrait")[0];
+	LGB.getCurrentUser();
+	current_user[0].innerText = LGB.getCurrentUser().getUsername();
+	current_user[1].innerText = LGB.getCurrentUser().getUsername();
+	console.log(LGB.getCurrentUser());
+	var aaa=LGB.getCurrentUser().attributes.favaicon;
+	portrait.src =aaa;
+	a.OffsideEntry(aaa,"../login/person.html");
+	//修改密码
+	var newPassword = document.getElementsByClassName("new_password")[0];
+	var con_submit = document.getElementsByClassName("con_submit")[0];
+	var confrimPass = document.getElementsByClassName("confirmPass")[0];
+	var tip = document.getElementsByClassName("tip")[0];
+	con_submit.onclick = function() {
+		confrim_pass();
+	}
+	window.onkeydown = function(e) {
+		if(e.keyCode == 13) {
+			confrim_pass();
+		}
+	}
+	newPassword.onfocus = function() {
+		tip.className = "tip d_none";
+	}
+	confrimPass.onfocus = function() {
+		tip.className = "tip d_none";
+		confrimPass = "";
+	}
+	function confrim_pass() {
+		var oldPassword = document.getElementsByClassName("old_passwrod")[0].value;
+		var newPassword = document.getElementsByClassName("new_password")[0].value;
+		var confrimPass = document.getElementsByClassName("confirmPass")[0].value;
+		if(newPassword != confrimPass) {
+			tip.className = "tip d_block";
+			tip.innerText = "你两次输入的密码不一致，请检查";
+			return;
+		}
+		else{
+			LGB.changePassword(oldPassword, newPassword, successFN, errorFN);
+
+			function successFN(user) {
+				tip.innerText = "更改成功,下次登录请使用新密码";
+				tip.className = "tip d_block";
+			}
+
+			function errorFN(error) {
+				console.log("失败");
+				console.log(error);
+				if(error.code == "109"||error.code=="101") {
+					tip.className = "tip d_block";
+					tip.innerText = "你的密码输入错误，请重新输入";
+				}
+			}
+		}
+	}
+	
+//保存用户数据
+	var modify_succ = document.getElementsByClassName("modify_succ")[0];
+	modify_succ.onclick = function() {
+		setMess();
+	}
+
+	function setMess() {
+		var form = document.getElementById("sett");
+		var r;
+		for(var i = 0; i < form.sex.length; i++) {
+			if(form.sex[i].checked) r = form.sex[i].value;
+		}
+		var intr = form.introduce.value; //自我介绍	
+		var job = form.job.value; //职业
+		var add = form.provinces.value + "-" + form.city.value; //地址
+		var bir = form.year.value + "-" + form.month.value + "-" + form.day.value; //出生日
+		var data = {
+			"sex": r,
+			"address": add,
+			"birthday": bir,
+			"professional": job,
+			"introduce_myself": intr,
+		}
+		LGB.updateUser(data, successFN, errorFN);
+
+		function successFN(o) {
+			// console.log("修改成功", o)
+			alert("个人信息更新成功,请重新登录");
+			window.open("./login.html","_self");
+		};
+
+		function errorFN(error) {
+			console.log("修改失败");
+			console.log(error);
+		}
+	}
+	var city = document.getElementsByClassName("city")[0];
+	//刷新时显示信息
+	window.onload = function() {
+		saveBasic(); //基本个人信息的保存
+		refresh();//快递地址信息的保存
+
+		function saveBasic() {
+			initCity();
+			var user = LGB.getCurrentUser();
+			var form = document.getElementById("sett");
+			console.log(user.attributes);
+			var data = {
+				"sex": user.attributes.sex,
+				"address": user.attributes.address,
+				"birthday": user.attributes.birthday,
+				"professional": user.attributes.professional,
+				"introduce_myself": user.attributes.introduce_myself,
+			}
+			job();
+
+			function job() {
+				var jobIn = document.querySelector(".job");
+				jobIn.value = data.professional; //职业
+			}
+			saveaddress();
+
+			function saveaddress() {
+				var addressArr = data.address;
+				var provinces = document.querySelector(".provinces");
+				var arr = addressArr.split("-");
+				var provincesCitys = new AddressPicker().getAllCitys();
+				var provincesIndex = provincesCitys.indexOf(arr[0]);
+				provinces.options[provincesIndex].selected = "selected";
+				setCityInput(arr[0], arr[1]);
+			}
+
+			sex();
+
+			function sex() {
+				if(data.sex == "女") {
+					form.sex[0].checked = true;
+				} else if(data.sex == "") {
+					form.sex[0].checked = false;
+					form.sex[1].checked = false;
+				} else {
+					form.sex[1].checked = true;
+				}
+			}
+			//保存年份
+			year();
+
+			function year() {
+				var year = document.getElementsByClassName("year")[0];
+				var month = document.getElementsByClassName("month")[0];
+				var day = document.getElementsByClassName("day")[0];
+				var birthday = data.birthday;
+				var birth = birthday.split("-");
+				year.value = birth[0];
+				month.value = birth[1];
+				day.value = birth[2];
+			}
+			//保存自我介绍
+			myself();
+
+			function myself() {
+				var write = document.getElementsByClassName("write")[0];
+				var diary = data.introduce_myself;
+				write.value = diary;
+			}
+		}
+	}
+
+	function setCityInput(p, c) {
+		var sel = new AddressPicker().getSubCity(p);
+		var index = sel.indexOf(c);
+		var city = document.querySelector(".city");
+		city.innerHTML = '';
+		console.log(sel.length)
+		for(var i = 0; i < sel.length; i++) { //循环添加省份进去select
+			var opt = document.createElement("option");
+			opt.value = sel[i];
+			opt.innerText = sel[i];
+			city.appendChild(opt);
+		}
+		city.options[index].selected = "selected";
+	}
+
+	function initCity() { //省份的联动
+		var provinces = document.querySelector(".provinces");
+		var city = document.querySelector(".city");
+		var address = new AddressPicker();
+		var sel = address.allCitys; //获取所有的省份
+		provinces.innerHTML = '';
+		console.log(sel.length)
+		for(var i = 0; i < sel.length; i++) { //循环添加省份进去select
+			var opt = document.createElement("option");
+			opt.value = sel[i];
+			opt.innerText = sel[i];
+			provinces.appendChild(opt);
+			provinces.addEventListener("change", function() {
+				var pro = provinces.value; //
+				var citys = address.getSubCity(pro);
+				console.log(citys)
+				city.innerText = "";
+				changeCity(citys, city);
+			}, false)
+		}
+	}
+
+	function changeCity(p, c) {
+		for(var i = 0; i < p.length; i++) {
+			var opt2 = document.createElement("option");
+			opt2.value = p[i];
+			opt2.innerText = p[i];
+			c.appendChild(opt2);
+		}
+	}
+
+	////保存用户新地址
+	var addAddres = document.getElementsByClassName("addAddres")[0];
+	var addr_box = document.getElementsByClassName("addr_box")[0];
+	addAddres.addEventListener("click", function() {
+		addr_box.style.display = "block";
+	}, false)
+	addaddres();
+
+	function addaddres() { //用户的地址
+		var prov = document.getElementsByClassName("prov")[0]; //省份
+		var provCity = document.getElementsByClassName("provCity")[0]; //城市
+		var provCityArea = document.getElementsByClassName("provCityArea")[0]; //区域
+		var sele = new AddressPicker().allCitys;
+		var c = '';
+		var d = '';
+		for(var i = 0; i < sele.length; i++) {
+			var opt = document.createElement("option");
+			opt.value = sele[i];
+			opt.innerText = sele[i];
+			prov.appendChild(opt);
+			prov.onchange = shi;
+		}
+
+		function shi(e) {
+			e = e || window.event;
+			console.log(e);
+			c = e.target.value;
+			provCity.innerText = "";
+			var citys = new AddressPicker().getSubCity(c);
+			for(var i = 0; i < citys.length; i++) {
+				var opt1 = document.createElement("option");
+				opt1.value = citys[i];
+				opt1.innerText = citys[i];
+				provCity.appendChild(opt1);
+				provCity.onchange = qu;
+			}
+		}
+
+		function qu(e) {
+			e = e || window.event;
+			d = e.target.value;
+			var qs = new AddressPicker().getCounty(c, d);
+			provCityArea.innerText = "";
+			for(var i = 0; i < qs.length; i++) {
+				var opt2 = document.createElement("option");
+				opt2.value = qs[i];
+				opt2.innerText = qs[i];
+				provCityArea.appendChild(opt2);
+			}
+		}
+	}
+	//点击取消快递新地址的添加
+	var cancel_create = document.getElementsByClassName("cancel_create")[0];
+	var addr_box = document.getElementsByClassName("addr_box")[0];
+	cancel_create.addEventListener("click", function() {
+		addr_box.style.display="none";
+	}, false);
+
+	// 点击确认，创建新节点
+	createNew();
+	function createNew(){
+		var create_addres = document.getElementsByClassName("create_addres")[0];
+		var checkError = document.getElementsByClassName("checkError")[0]; //检查信息的错误
+		var zipcode = document.getElementsByClassName("zipcode")[0]; //邮政编码
+		var phones = document.getElementsByClassName("phone2")[0]; //手机
+		var textStreets = document.getElementsByClassName("textStreet")[0]; //街道地址
+		create_addres.onclick = function() {
+			addr_box.style.display = "block";
+			var user = LGB.getCurrentUser();
+			var form2 = document.getElementsByClassName("delivery")[0];
+			var home = form2.prov.value + "-" + form2.provCity.value + "-" + form2.provCityArea.value //省份与城市的信息
+			var zipcode = form2.zipcode.value; //邮政编码
+			var textStreet = form2.textStreet.value; //街道地址
+			var phone2 = form2.phone2.value; //手机
+			var name = form2.name.value; //姓名
+			var addres_date = {
+				"home": home,
+				"zipCode": zipcode,
+				"street": textStreet,
+				"name": name,
+				"phone": phone2,
+			}
+
+			//判断输入用户所输入的信息是否存在错误
+
+			if(!(/^1[34578]\d{9}$/.test(phone2)) || !(/^[1-9]\d{5}$/.test(zipcode)) || (textStreet.length < 5 || textStreet.length > 20) || form2.prov.value == "" || form2.provCity.value == "") {
+				checkError.className = "checkError d_block";
+				checkError.innerText = "请检查你所输入的省/城/区，邮政编码，手机号码，街道地址是否有误，请更正";
+				return;
+			} else {
+				var sh = user.attributes.shippingaddress || [];
+				sh.push(addres_date);
+				var data = {
+					"shippingaddress": sh,
+				}
+
+				LGB.updateUser(data, successFN, errorFN);
+
+				function successFN(o) {
+					console.log("修改成功", o)
+				};
+
+				function errorFN(error) {
+					console.log("修改失败");
+					console.log(error);
+				}
+				addr_box.style.display = "none";
+
+			}
+			holdDown();
+
+			function holdDown() { //按下时，错误的信息会消失
+				zipcode.onfocus = function() {
+					checkError.className = "checkError d_none";
+				}
+				phones.onfocus = function() {
+					checkError.className = "checkError d_none";
+				}
+				textStreets.onfocus = function() {
+					checkError.className = "checkError d_none";
+				}
+
+			}
+			//用户新地址的信息在shorthand显示出来
+			var address_div = document.createElement("div");
+			address_div.className = "shorthand";
+			shippaddreses.appendChild(address_div);
+			var span1 = document.createElement("span");
+			span1.innerText = name;
+			address_div.appendChild(span1);
+			var span2 = document.createElement("span");
+			span2.innerText = home;
+			address_div.appendChild(span2);
+			var span3 = document.createElement("span");
+			span3.innerText = textStreet;
+			address_div.appendChild(span3);
+			var span4 = document.createElement("span");
+			span4.innerText = zipcode;
+			address_div.appendChild(span4);
+			var span5 = document.createElement("span");
+			span5.innerText = phone2;
+			address_div.appendChild(span5);
+
+			var a = document.createElement("a");
+			a.innerText = "删除";
+			a.setAttribute("class", "dele");
+			a.addEventListener("click", shipAddDelHandler, false);
+			address_div.appendChild(a);
+
+		}
+	};
+	var arry = [];
+	var shippaddreses = document.getElementsByClassName("shippaddresses")[0];
+
+	function refresh() {
+		var user = LGB.getCurrentUser();
+		//将保存的数据在p标签显示出
+		arry = user.attributes.shippingaddress;
+		for(var i = 0; i < arry.length; i++) {
+			var address_div = document.createElement("div");
+			address_div.className = "shorthand";
+			shippaddreses.appendChild(address_div);
+			var addres = {
+				"home": user.attributes.shippingaddress[i].home,
+				"zipCode": user.attributes.shippingaddress[i].zipCode,
+				"street": user.attributes.shippingaddress[i].street,
+				"name": user.attributes.shippingaddress[i].name,
+				"phone": user.attributes.shippingaddress[i].phone
+			}
+			console.log(user.attributes.shippingaddress[i]);
+			var span1 = document.createElement("span");
+			span1.innerText = addres.name;
+			address_div.appendChild(span1);
+			var span2 = document.createElement("span");
+			span2.innerText = addres.home;
+			address_div.appendChild(span2);
+			var span3 = document.createElement("span");
+			span3.innerText = addres.street;
+			address_div.appendChild(span3);
+			var span4 = document.createElement("span");
+			span4.innerText = addres.zipCode;
+			address_div.appendChild(span4);
+			var span5 = document.createElement("span");
+			span5.innerText = addres.phone;
+			address_div.appendChild(span5);
+
+			var a = document.createElement("a");
+			a.innerText = "删除";
+			a.setAttribute("class", "dele");
+			a.addEventListener("click", shipAddDelHandler, false);
+			address_div.appendChild(a);
+		}
+
+	}
+
+	function shipAddDelHandler() {
+		//				console.log(this.parentNode);
+
+		var index = getIndex(shorhand, shorhands);
+		var shorhand = this.parentNode;
+		console.log(shorhand);
+		var shorhands = document.getElementsByClassName("shorthand");
+		//				console.log("点击的是"+index);
+		var shipAddresses = LGB.getCurrentUser().attributes.shippingaddress || [];
+		console.log(shipAddresses);
+		shipAddresses.splice(index, 1);
+		var data = {
+			"shippingaddress": shipAddresses,
+		}
+		LGB.updateUser(data, function() {
+			shorhand.parentNode.removeChild(shorhand);
+		}, function(error) {
+			console.log(error)
+		});
+	}
+
+	function getIndex(ele, par) {
+		for(var i in par) {
+			if(par[i] === ele) {
+				return i;
+			}
+		}
+	}
+</script>
+	</body>
+
+</html>

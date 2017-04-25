@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/less.css"/>
+		<link rel="stylesheet" type="text/css" href="css/goodsToAdd.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shopdatail.css"/>
+	</head>
+	<body>
+		<div class="section">
+			<div class="header">
+				<img src="img/logo.png"/>
+				<span>乐购网后台管理 vol.1</span>
+				<ul>
+				    <li><button class="btn">首页</button></li>
+				    <li><button class="btn">用户管理</button></li>
+				    <li><button class="btn">商品管理</button></li>
+				    <li><a href="login.html">退出</a></li>
+			    </ul>
+			</div>
+			<div class="article" >
+				<div class="header">
+					<table border="1" cellspacing="1" cellpadding="1">
+						<tr>
+							<th width="180px">版本信息：</th>
+							<th width="630px">20170306vol.1</th>
+						</tr>
+						<tr>
+							<th>描述：</th>
+							<th>这不一般</th>
+						</tr>
+						<tr>
+							<th>SN：</th>
+							<th>4864654642316546(5465465SDAASDS5)</th>
+						</tr>
+						<tr>
+							<th>硬件版本：</th>
+							<th>33384455ABC</th>
+						</tr>
+						<tr>
+							<th>软件版本：</th>
+							<th>564654SADFS512312.545ASD</th>
+						</tr>
+						<tr>
+							<th>制造信息：</th>
+							<th>5451685612.546546</th>
+						</tr>
+						<tr>
+							<th>ONT注册状态：</th>
+							<th>O</th>
+						</tr>
+						<tr>
+							<th>ONT ID：</th>
+							<th>99</th>
+						</tr>
+						<tr>
+							<th>CPU使用率：</th>
+							<th>1%</th>
+						</tr>
+						<tr>
+							<th>内存使用率：</th>
+							<th>50%</th>
+						</tr>
+						<tr>
+							<th>定制信息：</th>
+							<th>通用</th>
+						</tr>
+						<tr>
+							<th>系统时间：</th>
+							<th>Header</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="article_1">
+				<div class="header">
+					用户系统：
+				</div>
+				<table border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<th width="50"></th>
+						<th width="250">用户名</th>
+						<th width="250">性别</th>
+						<th width="250">电话</th>
+						<th width="360">地址</th>
+					</tr>
+				</table>
+				<div id="commodity">
+					
+				</div>
+			</div>
+			<div class="article_2">
+				<div class="header">
+					<button id="btn_1"></button>
+					<button id="btn_2"></button>
+				</div>
+				<table border="1" cellspacing="0" cellpadding="0">
+				    <tr height="25">
+				    	<th width="25"><input class="select" type="checkbox" name="" id="" value="" /></th>
+				    	<th width="75" >商品ID</th>
+				    	<th width="200">商品名称</th>
+				    	<th width="450">实物展示</th>
+				    	<th width="135">价格/元</th>
+				    	<th width="150">物品类型</th>
+				    	<th width="120">操作</th>
+				    </tr>
+				</table>
+				<div id="commodity_1">
+					
+				</div>
+			</div>
+			<div id="article_3">
+				<form id="big_2" name="form">
+			        <div id="center">
+				      <a>商品名称：</a><input class="text_3" type="text" name="item_name" id="txt" /><br />
+				      <a>商品编号：</a><input class="text_3" id="numb" name="item_id" type="text" /><br />
+				      <span>系统将随机生成一个唯一的编号</span><br />
+				      <a>原价：</a><input class="text_3" name="org_price" type="text" /><br />
+				      <a>促销价格：</a><input class="text_3" name="price" type="text" /><br />
+				      <div id="size">
+					       <a>尺码：</a><input class="text_3" class="size" name="size" type="text" />
+					
+				      </div>
+				      <a>颜色：</a><input class="text_3" name="color" id="color" type="text"  /><br />
+				
+				      <a>商品参数：</a><input class="text_3" id="set" name="set" type="text" /><br />
+				
+				      <a>商品类型：</a><input  class="text_3" type="" name="" id="" value="" /><br />
+				      <a>封面图片：</a><input class="text_3" name="coverimg" id="in" type="file" /><br />
+				      <a>商品详情：</a><input class="text_3" name="description" id="txt_2" type="text"/><br />
+				      <br />
+	                  <!--	<input id="ins" type="file" multiple="multiple"><br />-->
+	           
+	                  <a class="img">详情图片:</a>
+	                  <div id="some_3"  class="text_3"><img id="woshiimg" src=""/></div>
+				      <a id="submit_3">提交</a>&nbsp;&nbsp;&nbsp;&nbsp;<a id="submit_2">取消</a>
+			    </div>
+		        </form>
+			</div>
+			<div id="article_4">
+				<form id="big_1" name="form">
+			        <div id="center">
+				      <a>商品名称：</a><input disabled="true" type="text" id="txt_1"/><br />
+				      <a>商品编号：</a><input disabled="true" id="numb_1" type="text" /><br />
+				      <a>原价：</a><input disabled="true" id="org_price" type="text" /><br />
+				      <a>促销价格：</a><input disabled="true" id="price" type="text" /><br />
+				      <div id="size">
+					       <a>尺码：</a><input disabled="true" id="size_1" class="size" type="text" />
+					
+				      </div>
+				      <a>颜色：</a><input disabled="true" id="color_1" type="text"  /><br />
+				
+				      <a>商品参数：</a><input disabled="true" id="set_1" type="text" /><br />
+				
+				      <a>商品类型：</a><input disabled="true" id="form" type="text" /><br />
+				      
+				      <a>商品详情：</a><input type="text" id="description" value="" /><br />
+	                  
+	                  <div id="some_1"><img id="coverimg_1" src=""/></div>
+				      <a id="submit_1">确认</a>
+			    </div>
+		        </form>
+			</div>
+			<div id="article_5">
+			<form id="big" name="form">
+			<div id="center">
+				<a>商品名称：</a><br /><textarea name="item_name" id="txxt" ></textarea><br />
+				<a>商品编号：</a><input id="numb" name="item_id" readonly="readonly" placeholder="编号由系统生成" type="text" /><br />
+				<a>原价：</a><input id="org_price" placeholder="" name="org_price" type="text" /><span id="orgwarn"></span><br />
+				<a>促销价格：</a><input id="price" name="price" type="text" /><span id="pr_warn"></span><br />
+				<div id="size">
+					<a>尺码：</a>
+					<input name="size" type="checkbox" value="S" />S
+					<input name="size" type="checkbox" value="M"/>M
+					<input name="size" type="checkbox" value="L" />L
+					<input name="size" type="checkbox" value="均码" />均码<br />
+					
+				</div>
+				<a>颜色：</a><input name="color" id="color" type="text" value="" placeholder="输入颜色,用逗号隔开"  /><br />
+				
+				<!--<a>商品参数：</a><input id="set" name="set" type="text" value='' /><br />-->
+				
+				<a>商品类型：</a>
+				<input type="text" name="type" placeholder="一级分类,例:衣服" /><br />
+				<a></a><input type="text" name="subtype" placeholder="二级分类,例:西服" />
+				<br />
+				<a>封面图片：</a><br />
+				<div id="cover_img">
+					<img id="co_img" src="img/shi.png"/>
+					<input accept="image/jpeg" name="coverimg" id="cover" type="file" />
+				</div><br />
+				<a>商品详情：</a><br /><textarea name="description" placeholder="请详细介绍您的商品，以便用户了解" id="txt" ></textarea><br />
+				<span>请为商品详情添加一些图片</span><br />
+	           <!--	<input id="ins" type="file" multiple="multiple"><br />-->
+	            <a>详情图片:</a>
+	            <div id="some"></div>
+	            <div id="shopva" >
+	            	<b>添加商品参数：<span>例:color:red</span></b><br />
+	            	<div id="spvakey">
+		            	<input class="spkey_1" type="text" placeholder="value" />
+		            	<input class="spkey_2" type="text" placeholder="key" /><span class="spvajia">+</span><br />
+	            	</div>
+	            	<!--<div class="spkeyva">
+		            	<input class="spkey_1" type="text" value="value" />
+		            	<input class="spkey_2" type="text" value="key" /><span class="spvajian">-</span><br />
+	            	</div>-->
+	            </div><br />
+	            <span id="warning">请先完善商品信息</span>
+				<button id="submit">提&nbsp;&nbsp;&nbsp;交</button>
+			</div>
+		    </form>
+			</div>
+			<div class="footer">
+				I'm just a bottom!!!!!cool!!
+			</div>
+		</div>
+		<script type="text/javascript" src="js/js_1.js"></script>
+		<script type="text/javascript" src="js/goodsToAdd.js"></script>
+		<script type="text/javascript" src="js/bmob-min.js"></script>
+		<script type="text/javascript" src="js/bmob.js"></script>
+		<script type="text/javascript" src="js/legou-background.js"></script>
+		<script src="js/call.js"></script>
+		<script src="js/call_2.js"></script>
+		<script src="js/deletedData.js"></script>
+		<script src="js/skip.js"></script>
+		<script src="js/shopdatails.js"></script>
+		<script src="js/loginVerify.js"></script>
+	</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/Legou-top-button.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/Legou_cart.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/pay_page.css"/>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="cart_flow">
+			<div class="cf_header">
+				<div class="logo">
+					<a href="###"><img class="logo_pic" src="../img/logo.png"/></a>
+				</div>
+				<div class="shoppingFlow">
+					<div class="rate">
+						1
+					</div>
+					<span class="forOne">购物车</span>
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						
+					</div>
+					<div class="rate">
+						2
+					</div>
+					<span class="forTwo">确认订单</span>
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						
+					</div>
+					<div class="rate">
+						3
+					</div>
+					<span class="forThree">支付</span>
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						
+					</div>
+					<div class="rate">
+						4
+					</div>
+					<span class="forfour">完成</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="content">
+			<div class="pay_page" >
+				<h4>选择收货地址</h4>
+				
+				<div class="show_address">
+					
+				</div>
+				
+				<div class="address_page">
+					<a href="###" class="about_address">管理收货地址</a>
+					<a href="###" class="newAddress">使用新地址</a>
+				</div>
+				
+				<div class="add_address">
+					<div class="writeAddress">
+						<ul class="address_ul">
+							<li>
+								<span class="fs">省：</span>
+								<i> * </i>
+								<select class="province"></select>
+								<span class="ofs">市：</span>
+								<select class="city"></select>
+								<span class="ofs">区：</span>
+								<select class="district"></select>
+							</li>
+							<li>
+								<span class="fs">邮政编码：</span>
+								<i> * </i>
+								<input type="text" class="codeNum" />
+								<span class="codeSp">请填写正确的邮政编码</span>
+							</li>
+							<li>
+								<span class="fs">街道地址：</span>
+								<i> * </i>
+								<textarea class="street"></textarea>
+								<span class="strSp">请输入街道地址，最少5个字，最多不能超过100个字</span>
+							</li>
+							<li>
+								<span class="fs">收货人姓名：</span>
+								<i> * </i>
+								<input type="text" class="receiver" />
+								<span class="recSp">请填写收货人</span>
+							</li>
+							<li>
+								<span class="fs">手机：</span>
+								<i> * </i>
+								<input type="text" class="tel" />
+								<span class="telSp">请填写正确的联系号码</span>
+							</li>
+							<li>
+								<button class="conf_btn">确认地址</button>
+								<button class="cencel_btn">取消</button>
+							</li>
+						</ul>
+						
+					</div>
+				</div>
+				<h4>确认商品信息</h4>
+				<div class="massage_header">
+					<ul class="massage_ul">
+						<li>商品</li>
+						<li>商品信息</li>
+						<li>单价(元)</li>
+						<li>数量</li>
+						<li>小计</li>
+					</ul>
+				</div>
+				<div class="goods_massage">
+					
+				</div>
+				<div class="pay_page_footer">
+					<div class="ppf_left">
+						<input type="image" src="../img/leftBtn.png" class="backCartBtn" />
+						<a href="###" class="backCarta">返回购物车</a>
+					</div>
+					<div class="ppf_right">
+						<ul class="ppfr_ul">
+							<li><span>共有</span></li>
+							<li><span class="payNum"></span></li>
+							<li><span>件商品，总计：</span></li>
+							<li><span class="payAllMoney">0.00</span></li>
+							<li><button class="confirPay_btn">确认并付款 ></button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer"></div>
+		<script src="../js/Legou-top-button.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bmob.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bmob-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/legou-background.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/pay_page.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			var a = new LeguTop("header"); 
+			// a.LeguTopStyle();    //创建一个div添加一个id,在javascript里面复制这段代码-----头部
+			
+			var b = new LeguButton("footer"); 
+			b.LeguButtonStyle();//底部
+			//获取用户
+			LGB.init();
+			var user = LGB.getCurrentUser();
+		</script>
+	</body>
+</html>

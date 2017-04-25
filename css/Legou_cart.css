@@ -1,0 +1,131 @@
+#content{
+	margin: 30px auto 20px;
+	width: 1200px;
+	position: relative;
+	/*background-color: white;*/
+}
+/* 乐购logo栏 */
+#cart_flow{
+	width: 100%;
+	border: 1px solid #DDDDDD;
+}
+.cf_header{
+	overflow: hidden;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	position: relative;
+}
+/* 乐购logo */
+.logo{
+	float: left;
+	width: 150px;
+	height: 60px;
+}
+.logo_pic{
+	width: 100%;
+}
+/* 购物进度条 */
+.shoppingFlow{
+	float: right;
+	overflow: hidden;
+}
+.shoppingFlow div{
+	float: left;
+}
+.rate{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: rgb(221,221,221);
+	color: white;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 10px;
+}
+.row{
+	width: 60px;
+	height: 5px;
+	background-color: rgb(221,221,221);
+	margin-top: 20px;
+}
+.shoppingFlow div:nth-child(1){
+	background-color: orange;
+}
+.shoppingFlow div:nth-child(3){
+	background-color: orange;
+}
+.forOne{
+	position: absolute;
+	right: 427px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forTwo{
+	position: absolute;
+	right: 273px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forThree{
+	position: absolute;
+	right: 143px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forfour{
+	position: absolute;
+	right: -2px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+
+/* 空购物车 */
+.cart{
+	width: 1200px;
+	height: 226px;
+	background-color: white;
+	/*display: none;*/
+}
+.node_pic{
+	position: absolute;
+	margin-left: 400px;
+	margin-top: 50px;
+	width: 80px;
+	height: 60px;
+	background: url(../img/cart.png) no-repeat;
+}
+.node_h5{
+	position: absolute;
+	top: 60px;
+	left: 500px;
+	background-color: white;
+	color: #333;
+	font:700 16px/1 helvetica,tahoma,arial,sans-serif;
+	
+}
+.node_ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	top: 85px;
+	left:500px;
+}
+.node_li{
+	background-color: white;
+	color: #666;
+	font:normal 12px/2 helvetica,tahoma,arial,sans-serif;
+}
+.node_li a{
+	background-color: white;
+	color: #ff4f7c;
+}
+
+

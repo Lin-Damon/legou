@@ -1,0 +1,263 @@
+/*搜索的CSS样式 edited by 黄武远*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	color:#333;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.fr b{
+	font-style: normal;
+	font-size: 20px;
+	vertical-align: middle;
+	padding: 0 5px;
+	color: rgb(200,200,200);
+}
+.nothing{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	border: 1px solid pink;
+}
+#search{
+	text-align: center;
+	font-size: 0;
+	width: 485px;
+	height: 36px;
+	border: 1px deeppink solid;
+	display: flex;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+#search .select{
+	width: 60px;
+	height: 36px;
+	font-size: 16px;
+	line-height: 36px;
+}
+#search input{
+	height: 32px;
+	width: 320px;
+	font-size: 18px;
+}
+#search button{
+	width: 102px;
+	height: 36px;
+	background-color: deeppink;
+	border: none;
+	color: white;
+	font-size: 24px;
+}
+#allClass{
+	max-width: 1200px;
+	min-width: 960px;
+}
+.classes{
+	width: 960px;
+	height: 51px;
+	display: flex;
+	margin: 0 auto 20px;
+		
+}
+.classes h3{
+	width: 90px;
+	font-size: 12px;
+	height: 51px;
+	line-height: 51px;
+    padding: 0 0 0 10px;
+    text-align: left;
+    color: #333;
+    font-weight: 700;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+.classes>div {
+	display: flex;
+	width: 840px;
+	padding-right: 20px;
+	border-bottom: 1px dotted rgb(229,229,229);
+}
+.classes div a{
+	font-size: 12px;
+	margin: 15px 30px 0 0;
+    height: 20px;
+    line-height: 20px;
+    color: rgb(115,115,115);
+    text-decoration: none;
+}
+.classes div a:hover{
+	text-decoration: underline;
+}
+.select_top{
+	font-size: 12px;
+    height: 24px;
+    padding: 7px 0;
+    margin: 0 auto;
+    width: 960px;
+    line-height: 24px;
+    border: 1px solid rgb(229,229,229);
+	display: flex;
+}
+.select_top a{
+	width: 25px;
+	padding: 0 20px;
+	text-align: center;
+	text-decoration: none;
+	color:rgb(89,89,89);
+}
+.select_top a:nth-of-type(1),.select_top a:nth-of-type(2),.select_top a:nth-of-type(3){
+	border-right: 1px solid rgb(229,229,229);
+}
+.select_top a:nth-of-type(3){
+	margin-right: 20px;
+}
+.select_top input{
+	width: 40px;
+	height: 22px;
+	outline: none;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.txt{
+	width: 50px;
+	border: 1px solid rgb(229,229,229);
+	position: relative;
+	overflow: hidden;
+}
+.select_top 	.min_max{
+	width: 74px;
+	height: 22px;
+	padding: 0;
+	border: 1px solid rgb(229,229,229);
+}
+.select_top .nobor{
+	border-left: none;
+	border-right: none;
+}
+.select_top .confirm{
+    border: 1px solid #dadada;
+    color: #333;
+    width: 45px;
+    height: 22px;
+    padding: 0;
+    line-height: 22px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.show_goods{
+	width: 960px;
+	margin-top: 30px;
+	/*position: relative;*/
+}
+.good_container{
+	width: 985px;
+	display: flex;
+	flex-wrap: wrap;
+	/*position: relative;*/
+}
+.big_search{
+	width: 960px;
+	margin: 0 auto;
+}
+.pubuliu{
+	width: 220px;
+	height: 410px;
+	margin: 0 26px 25px  0;
+}
+.pubuliu a{
+	text-decoration: none;
+	display: block;
+	cursor: pointer;
+}
+.pubuliu .img_a{
+	width: 220px;
+	height: 330px;
+	overflow: hidden;
+}
+.img_a img{
+	width: 100%;
+}
+.detail_a{
+	width: 202px;
+	padding: 0 8px;
+}
+.detail_a p{
+    width: 100%;
+	width: 202px;
+	height: 40px;
+	overflow: hidden;
+    line-height: 20px;
+    position: relative;
+    margin-top: 6px;
+    font-size: 14px;
+}
+.good_info{
+	height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    color: #333;
+    width: 100%;
+}
+.good_info b{
+	font-size: 16px;
+}
+.good_info i{
+	 font-style: normal;
+	font-size: 14px;
+    color: #666;
+    margin: 4px 0 0 8px;
+    line-height: 20px;
+    text-decoration: line-through;
+}
+.good_info span{
+	font-size: 12px;
+	padding-right: 8px;
+	color:#999;
+}
+.good_info span img{
+	width: 16px;
+	vertical-align: middle;
+}
+.good_info span var{
+	font-style: normal;
+	vertical-align: middle;
+}
+.back{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 2px;
+	bottom: 8px;
+	background-color: black;	
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	display: none;
+}
+.page{
+	width: 960px;
+	height: 24px;
+	text-align: center;
+}
+.page_btn{
+	width: 200px;
+	margin: 0 auto;
+}
+.page_btn a{
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 8px;
+	width: 20px;
+}

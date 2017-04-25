@@ -1,0 +1,203 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.lf{
+	float: left;
+}
+.clear{	/*清除浮动*/
+	content: '';
+	display: block;
+	clear: both;
+}
+.d_none{
+	display: none;
+}
+.d_block{
+	display: block;
+}
+a{
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+.logo_wrap{				/*logo的位置*/
+	height: 56px;
+	padding: 20px 0px 30px 100px;
+	line-height: 56px;
+}
+.content{						/*中部内容*/
+	width: 100%;
+	height: 600px;
+	background: url(../img/reg_bg.jpg) -300px 0;
+}
+.lg_banner{
+	width: 880px;
+	height: 600px;
+	position: absolute;
+}
+.lg_banner a{				/*用户点击会重新加载这个登陆界面*/
+	display: block;
+	width: 700px;
+	height: 440px;
+	margin: 60px 0px 0px 60px;
+}
+.lg_left,.lg_left_regist,.scann_qrcode{				/*注册小界面*/
+	width: 356px;
+	padding: 0px 0px 30px 40px;
+	margin: 20px 0px 30px 140px;
+	background:rgba(255,255,255,0.4);
+	position: relative;
+	left: 560px;
+}
+.lo_mod{			/*普通登入和手机登入*/
+	width: 92%;
+	display: inline-block;
+	cursor: pointer;
+}
+.lo_mod a{
+	display: inline-block;
+}
+.lo_mod a{
+	margin: 20px 39px 0px 0px;
+}
+.lg_from{
+	margin-top:16px ;
+}
+.regist{		/*新用户注册标题*/
+	height: 41px;
+}
+.user_name input,.password_name input{		/*正常登录部分的用户名和密码*/
+	width: 300px;
+	height: 40px;
+	padding: 0px 6px 0px 6px;
+	margin-bottom:16px ;
+	display:inline-block;
+}
+.input_phone span,.input_pass a,.confirm_pass a{
+	width: 108px;	/*  新用户注册也在里面*/
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	margin-right:10px ;
+	display: inline-block;
+	font-size:12px ;
+	color: white;
+}
+.input_phone span{
+	background: #FA8072;
+}
+.input_pass a,.confirm_pass a{
+	margin-right:7px ;
+}
+.input_pass a,.confirm_pass a{
+	background: salmon ;
+}
+.input_phone input,.input_pass input,.confirm_pass input{
+	width: 180px;
+	height: 41px;
+	padding: 0px 6px 0px 6px;
+	margin-bottom:18px ;
+}
+.sub_mit input,.sub_mit_regist input{		/*登录*/	
+	width: 319px;
+	height: 42px;
+	background: #E9967A;
+	border:transparent ;
+	color: white;
+}
+.read_agreement{
+	padding-left:68px ;
+}
+.read_agreement span,.read_agreement a{
+	display: inline-block;
+	font-size: 12px;
+	vertical-align: middle;
+}
+.checkbox{
+	vertical-align: middle;
+}
+.lg_reg{		/*忘记密码，与免费注册*/
+	text-align: right;
+	padding: 30px 40px 0px 0px;
+	font-size:13px ;
+}
+.lg_reg a:nth-of-type(1){
+	display: inline-block;
+	margin-right:20px ;
+	text-decoration: underline;
+	color: #999999;
+}
+.lg_reg a:nth-of-type(2){
+	color: red;
+	text-decoration: underline;
+}
+.read_agreement{
+	margin-top: 20px;
+}
+.exist_log{			/*已有帐号登陆*/
+	text-align: right;
+	margin-top:20px ;
+	padding-right: 40px;
+	font-size:12px ;
+	color: #767676;
+}
+.exist_log a,.read_agreement a,.download_app a{
+	text-decoration: underline;
+}
+.error_tip,.errorTip{			/*错误小提示*/
+	color: red;
+	text-align: center;
+}
+/*底部*/
+.index_foot{
+	width: 1200px;
+	margin: 150px auto 0px;
+}
+.novice_help{
+	height: 70px;
+	
+}
+.novice_help,.about_myself,.certificate{
+	padding-left:100px ;
+}
+h4{
+	text-align: center;
+}
+.one,.two,.three,.four{
+	width: 248px;
+	overflow: hidden;
+}
+ul{
+	margin: 0;
+	padding: 10px 0px 0px 50px;
+	overflow: hidden;
+}
+li{
+	list-style-type: none;
+	float: left;
+	font-size:12px ;
+	color: #999999;
+	width: 90px;
+}
+.four ul li{
+	width: 45px;
+}
+.about_myself{
+	padding-top: 10px;
+	border-top: 2px solid  #FF5777;
+}
+.about_myself ul li{
+	width: 80px;
+}
+.about_myself ul li:last-child{
+	width: 350px;
+}
+.certificate{
+	margin-top:10px ;
+	color: #767676;
+	font-size: 12px;
+}
+ul li a:hover{
+	color:  #E9967A;
+}

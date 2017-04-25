@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/new_file.css" />
+	</head>
+
+	<body>
+		<div id="sider"></div>
+		<div id="box">
+			<div id="head">
+				<div class="h_name">
+					<span>乐购</span><span class="pay">支付</span>
+				</div>
+				
+				<div class="shoppingFlow">
+					<div class="rate">
+						1
+					</div>
+					<span class="forOne">购物车</span>
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						
+					</div>
+					<div class="rate">
+						2
+					</div>
+					<span class="forTwo">确认订单</span>
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						
+					</div>
+					<div class="rate">
+						3
+					</div>
+					<span class="forThree">支付</span>
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						
+					</div>
+					<div class="rate">
+						4
+					</div>
+					<span class="forfour">完成</span>
+				</div>
+				
+			</div>
+			<div id="main">
+				<div id="main_m"></div>
+				<div id="wechat_pay">
+					<div class="w_h">
+						<span class="wh_y">实付金额：</span>
+						<span><img src="../img/timg.jpg"/ class="wh_p"></span>
+					</div>
+					<div class="w_f">
+						<div class="wf_r">
+							<p class="name">请使用微信扫描二维码</p>
+							<p class="name">以完成支付</p>
+							<p class="name2">
+								<a href="###">详细使用帮助</a>
+							</p>
+							<p class="name2">（如果支付遇到问题，可
+								<a href="###">联系客服</a>）</p>
+						</div>
+						<div class="wf_l"><img src="../img/legou.png" class="wf_g" /></div>
+					</div>
+				</div>
+				<div id="alipay_pay">
+					<div class="ap_h">
+						<img src="../img/pay.jpg" class="ap_p" /><span class="ap_f">支付宝支付</span>
+						<span class="wh_y">实付金额：</span>
+					</div>
+					<div class="ap_m">
+						<div class="ap_r">
+							<p class="ap_c">使用电脑支付</p>
+							<div class="ap_g">
+								<img src="../img/diannao.jpg" class="ap_d" />
+								<div class="ap_b">
+									确认并付款
+
+								</div>
+							</div>
+						</div>
+						<div class="ap_l">
+							<p class="ap_n">使用支付宝钱包扫码</p>
+							<div class="ap_e"><img src="../img/legou.png" class="ap_a" /></div>
+						</div>
+					</div>
+				</div>
+				<div id="in_banking">
+					<span class="in_pay">网上银行</span>
+					<span class="wh_y">实付金额：</span>
+					<ol class="in_b">
+						<li>
+							<a href="###"><img src="../img/0001.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0002.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0003.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0004.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0005.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0006.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0007.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0008.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0009.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0010.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0011.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0012.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0016.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0017.jpg" /></a>
+						</li>
+						<li>
+							<a href="###"><img src="../img/0019.jpg" /></a>
+						</li>
+					</ol>
+				</div>
+				<div id="footer">
+					<p>暂不支持银行卡支付，请选择其他支付方式</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/offside_head_fixed.js" type="text/javascript">
+		
+	</script>
+	<script type="text/javascript">
+		var a =new Offside("sider");
+		a.OffsideStyle();
+
+
+	</script>
+	<script type="text/javascript">
+		var wechat_pay = document.getElementById("wechat_pay");
+		var alipay_pay = document.getElementById("alipay_pay");
+		var in_banking = document.getElementById("in_banking");
+		var wh_y = document.getElementsByClassName("wh_y");
+		var a = [];
+		a.push(wechat_pay);
+		a.push(alipay_pay);
+		a.push(in_banking);
+		console.log(a)
+		for(var i = 0; i < 3; i++) {
+			console.log(a[i], wh_y[i])
+			a[i].index = i;
+			a[i].onmouseover = function() {
+				wh_y[this.index].style.display = "block";
+			}
+			a[i].onmouseout = function() {
+				wh_y[this.index].style.display = "none";
+
+			}
+		}
+		
+	</script>
+
+</html>

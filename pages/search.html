@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/Legou-top-button.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+		<style type="text/css">
+			*{
+				/*text-align: center;*/
+			}
+		</style>
+	</head>
+	<body style="min-width: 900px;">
+		
+		<div id="my_side"></div>
+		<div id="myTop"></div>
+		<div id="my_search"></div>
+		<div id="allClass"></div>
+		<div id="myBot"></div>
+		<script type="text/javascript" src="../js/bmob.js"></script>
+		<script type="text/javascript" src="../js/bmob-min.js"></script>
+		<script type="text/javascript" src="../js/legou-background.js"></script>
+		<script src="../js/search.js"  charset="utf-8"></script>
+		<script src="../js/Legou-top-button.js"  charset="utf-8"></script>
+		<script src="../js/offside_head_fixed.js"  charset="utf-8"></script>
+		<script type="text/javascript">
+			LGB.init();
+			//顶部
+			
+			var btop =new LeguTop("myTop");
+			btop.Lgougouwu("../home_page/legou.html");
+			var user = LGB.getCurrentUser();
+			
+			//底部
+			var b =new LeguButton(myBot); 
+			b.LeguButtonStyle();
+			//侧栏
+			var sea=new HeadFixed('my_search',"####");
+			sea.HeadFixedStyle();
+			var si=new Offside('my_side');
+			si.OffsideStyle();
+			// console.log(123423423);
+			
+			if (user) {
+				var icon = user.attributes.favaicon;
+				si.OffsideEntry(icon,"userCenter.html");
+			}
+	</script>
+	</body>
+</html>

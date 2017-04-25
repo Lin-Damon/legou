@@ -1,0 +1,148 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#big{
+	width: 80%;
+	margin: auto;
+	border: 5px solid red;
+	text-align: center;
+	position: relative;
+}
+#center{
+	line-height: 40px;
+	padding: 20px;
+	width:70%;
+	margin: 0 auto;
+	text-align: left;
+}
+#center input{
+	display: inline-block;
+	height: 30px;
+}
+#center a{
+	display: inline-block;
+	width: 95px;
+}
+#txxt{
+	display: inline-block;
+	height: 30px;
+	width: 265px;
+	font-size: 17px;
+}
+#txt{
+	display: inline-block;
+	height: 80px;
+	width: 430px;
+	font-size: 17px;
+}
+span{
+	color: red;
+	font-size: 12px;
+}
+#cover{
+	display: inline-block;
+	width: 175px;
+}
+#submit{
+	display: block;
+	width: 120px;
+	height: 40px;
+	text-align: right;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	font-size: 23px;
+	color: white;
+	margin: auto;
+	background-color: gray;
+}
+#size{
+	width: 570px;
+}
+#size,#size input{
+	vertical-align: middle;
+}
+#menu{
+	width: 173px;
+	height: 35px;
+}
+#ins{
+	display: inline-block;
+	width: 175px;
+	height: 100%;
+}
+#some{
+	font-size: 0;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	width: 300px;
+	height: 300px;
+	font-size: 0;
+	border: 1px solid gray;
+}
+.box,#cover_img{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+#center .box .upload,#cover_img img{
+	display: inline-block;
+	position: absolute;
+	border: none;
+	width: 100px;
+	height: 100px;
+}
+#center .box .hidden,#cover_img #cover{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+}
+#center .box .x{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	right: 0;
+	top: 0;
+	font-size: 28px;
+	text-align: center;
+	line-height: 14px;
+	color: red;
+	cursor: pointer;
+	border: 1px solid red;
+}
+#shopva{
+	width: 300px;
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	
+}
+#shopva .spkey_1,#shopva .spkey_2,#shopva .keys,#shopva .values{
+	display: inline-block;
+	width: 100px;
+}
+#shopva .spvajia,#shopva .spvajian{
+	vertical-align: middle;
+	display: inline-block;
+	width: 50px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	color: white;
+	cursor: pointer;
+	background-color: gray;
+	font-size: 20px;
+}
+#warning{
+	display: block;
+	text-align: center;
+}

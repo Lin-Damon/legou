@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#box {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(240, 240, 240);
+}
+
+#head {
+	width:100%;
+	/*height: 65px;*/
+	
+	border-bottom: solid 2px lightgray;
+	overflow: hidden;
+	
+}
+
+/* 购物进度条 */
+.shoppingFlow{
+	float: right;
+	overflow: hidden;
+	margin-right: 70px;
+}
+.shoppingFlow div{
+	float: left;
+	overflow: hidden;
+}
+.shoppingFlow span{
+	margin-right: 70px;
+}
+.rate{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: rgb(221,221,221);
+	color: white;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 10px;
+}
+.row{
+	width: 60px;
+	height: 5px;
+	background-color: rgb(221,221,221);
+	margin-top: 20px;
+}
+.forOne{
+	position: absolute;
+	right: 427px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forTwo{
+	position: absolute;
+	right: 273px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forThree{
+	position: absolute;
+	right: 143px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forfour{
+	position: absolute;
+	right: -2px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+
+.h_name {
+	height: 48px;
+	font: bold normal 40px "微软雅黑";
+	color: orange;
+	position: relative;
+	float: left;
+	padding: 10px 0 20px 70px;
+	border: 1px;
+}
+
+.pay {
+	font: normal 20px "微软雅黑";
+	color: lightgray;
+}
+
+#main {
+	width: 1220px;
+	height: 1300px;
+	margin-left: 100px;
+	margin: 0 auto;
+	background-color: white;
+}
+
+#main_m {
+	width: 1220px;
+	height: 150px;
+	background-color: white;
+	border-bottom: solid 2px lightgray;
+}
+/*微信*/
+#wechat_pay {
+	width: 1136px;
+	height: 370px;
+	background-color: white;
+	margin:30px 0px 0px 40px;	
+	border: solid 2px lightgray;
+	
+}
+.w_h,.ap_h{
+	height: 50px;
+	/*background-color: blue;*/	
+}
+.wh_p{
+	width: 122px;
+	height: 84px;
+	margin-left: 20px ;
+}
+.wh_y{
+	float: right;
+	margin:20px 80px ;
+	display: none;
+}
+.w_f{	
+	height: 500px;
+	margin-top: 20px;
+}
+.wf_l,.wf_r{
+	width: 300px;
+	height: 300px;
+}
+.wf_r{
+	background-color:#f4f4f4;
+	float: right;
+	margin:0px 200px;
+}
+.name{
+	font: bold normal 20px "微软雅黑";
+	color: gray;
+	text-align: center;	
+}
+.name:first-child{
+	margin-top: 50px;
+}
+.name2{
+	font: normal 10px "微软雅黑";
+	color: lightgray;
+	text-align: center;
+	margin-top: 50px;			
+}
+.name2 a{
+	text-decoration:none ;
+	color: #227ecd;	
+}
+.name2:last-child{
+	margin-top: 0px;	
+}
+
+.wf_g{
+	width: 200px;
+	height: 200px;
+	margin:50px 0 0 200px;
+}
+/*支付宝*/
+#alipay_pay {
+	width: 1136px;
+	height: 370px;
+	background-color: white;
+	margin:30px 0px 0px 40px;	
+	border: solid 2px lightgray;
+	
+}
+.ap_p{
+	
+	width: 80px;
+	height: 50px;
+	vertical-align: middle;
+}
+.ap_f{	
+	vertical-align: middle;	
+}
+.ap_m{
+	height: 300px;
+	margin-top: 20px;
+	background-color: rgb(238,238,209);
+	
+}
+.ap_l,ap_r{
+	width: 560px;
+	height: 300px;	
+	
+}
+.ap_r{
+	float: right;
+}
+.ap_n,.ap_c{
+	width: 525px;
+	height: 50px;
+	margin-left: 40px;
+	font: normal 20px "微软雅黑" ;
+	color: gray;
+	text-align: center;
+	background-color: rgb(205,205,180);
+	line-height: 40px;
+}
+.ap_e,.ap_g{
+	width: 523px;
+	height: 238px;
+	background-color: white;
+	margin-left: 42px ;
+	
+}
+
+.ap_a{
+	width: 200px;
+	height: 200px;
+	margin-left: 145px ;
+		
+}
+.ap_c{
+	margin-right: 40px;
+}
+.ap_d{
+	width: 200px;
+	height: 170px;
+	margin-left: 157px ;
+	vertical-align: middle;
+}
+.ap_b{
+	width: 236px;
+	height: 54px;
+	margin-left: 140px;
+	font: normal 20px "微软雅黑";
+	color: white;
+	background-color:#f5456e;
+	vertical-align: middle;
+	text-align:center;
+	margin: 0 auto;
+	line-height: 50px;
+	cursor: pointer;
+}
+	/*网上银行*/
+#in_banking {
+	width: 1136px;
+	height: 250px;
+	border: solid 2px lightgray;
+	background-color: white;
+	margin:30px 0px 0px 40px;	
+
+}
+
+.in_pay {
+	font: normal 20px "微软雅黑";
+	margin: 30px 0px 0px 100px;
+    display: inline-block;
+}
+.in_b{
+	width: 850px;
+	height: 187px;
+	margin:20px 0px 0px 165px;
+	list-style: none;
+}
+li{
+	width: 130px;
+	height: 40px;
+	position: relative;
+	display: inline-block;
+}
+/*底部*/
+#footer{
+	width: 1220px;
+	height: 50px;
+	font: normal 20px "微软雅黑";
+	color: gray;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 15px;
+}

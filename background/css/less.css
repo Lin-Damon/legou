@@ -1,0 +1,335 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+li {
+  list-style: none;
+  float: left;
+}
+body {
+  background-color: orange;
+}
+.section {
+  width: 1200px;
+  height: 100%;
+  background: transparent;
+  margin: 0 auto;
+}
+.section .header {
+  width: 1200px;
+  height: 90px;
+  background: #ffffff;
+  position: relative;
+}
+.section .header img {
+  height: 100%;
+  margin-left: 20px;
+}
+.section .header span {
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 5px;
+  left: 250px;
+  color: #FF6700;
+}
+.section .header ul {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.section .header ul li {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.section .header ul li button {
+  border: none;
+  border-radius: 10px 10px 0 0;
+  width: 90px;
+  height: 30px;
+  background: #ffa500;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+.section .header ul li button:hover {
+  background: #FF6700;
+  color: #fff;
+}
+.section .header ul li a {
+  width: 90px;
+  height: 30px;
+  background: #ffa500;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10px 10px 0 0 ;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+}
+.section .header ul li a:hover {
+  background: #FF6700;
+  color: #fff;
+}
+.section .article {
+  width: 1200px;
+  height: 600px;
+  background: transparent;
+  border-top: 10px solid orange;
+  border-bottom: 10px solid orange;
+  display: block;
+}
+.section .article .header {
+  width: 800px;
+  height: 600px;
+  background: #ffa500;
+  margin: 0 auto;
+  position: relative;
+}
+.section .article .header table {
+  position: absolute;
+  top: 50px;
+}
+.section .article_1 {
+  width: 1200px;
+  height: 600px;
+  background: #ffffff;
+  border-top: 10px solid orange;
+  border-bottom: 10px solid orange;
+  display: none;
+}
+.section .article_1 .header {
+  width: 1200px;
+  height: 60px;
+  background: transparent;
+  position: relative;
+  font-size: 35px;
+  line-height: 60px;
+  padding-left: 16px;
+}
+.section .article_1 table {
+  border: 1px solid gray;
+  margin-top: 20px;
+  margin-left: 13px;
+  color: gray;
+  font-size: 15px;
+}
+.section .article_1 #commodity {
+  width: 1171px;
+  height: 485px;
+  background: transparent;
+  position: relative;
+  left: 13px;
+}
+.section .article_1 #commodity ul {
+  width: 1169px;
+  height: 50px;
+  border: 1px solid gray;
+  border-top: none;
+}
+.section .article_1 #commodity ul li {
+  height: 50px;
+  border-right: 1px solid gray;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+.section .article_1 #commodity ul li:nth-child(1) {
+  width: 52px;
+}
+.section .article_1 #commodity ul li:nth-child(2) {
+  width: 250px;
+}
+.section .article_1 #commodity ul li:nth-child(3) {
+  width: 252px;
+}
+.section .article_1 #commodity ul li:nth-child(4) {
+  width: 251px;
+}
+.section .article_1 #commodity ul li:nth-child(5) {
+  width: 359px;
+}
+.section .article_2 {
+  width: 1200px;
+  height: 2260px;
+  background: #ffffff;
+  position: relative;
+  border-top: 10px solid orange;
+  border-bottom: 10px solid orange;
+  display: none;
+}
+.section .article_2 .header {
+  width: 1200px;
+  height: 60px;
+  background: transparent;
+  position: relative;
+}
+.section .article_2 .header button {
+  width: 61px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.section .article_2 .header :nth-child(1) {
+  background: url(../img/append.jpg);
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+.section .article_2 .header :nth-child(2) {
+  background: url(../img/delete.jpg);
+  position: absolute;
+  bottom: 0px;
+  left: 81px;
+}
+.section .article_2 .header :nth-child(3) {
+  background: url(../img/up.jpg);
+  position: absolute;
+  bottom: 0px;
+  left: 152px;
+}
+.section .article_2 .header :nth-child(4) {
+  background: url(../img/down.jpg);
+  position: absolute;
+  bottom: 0px;
+  left: 223px;
+}
+.section .article_2 table {
+  border: 1px solid gray;
+  margin-top: 20px;
+  margin-left: 13px;
+  color: gray;
+  font-size: 15px;
+}
+.section .article_2 #commodity_1 {
+  width: 1171px;
+  height: 2145px;
+  background: transparent;
+  position: absolute;
+  bottom: 8px;
+  left: 13px;
+}
+.section .article_2 #commodity_1 ul {
+  width: 1169px;
+  height: 159px;
+  border: 1px solid gray;
+  border-top: none;
+}
+.section .article_2 #commodity_1 ul li {
+  overflow: hidden;
+  border-right: 1px solid gray;
+  height: 159px;
+  text-align: center;
+  line-height: 159px;
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+}
+.section .article_2 #commodity_1 ul li img {
+  height: 100%;
+  transform: rotateZ(90deg);
+}
+.section .article_2 #commodity_1 ul li a {
+  height: 15px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(1) {
+  width: 27px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(2) {
+  width: 75px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(3) {
+  width: 202px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(4) {
+  width: 451px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(5) {
+  width: 135px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(6) {
+  width: 151px;
+}
+.section .article_2 #commodity_1 ul li:nth-child(7) {
+  width: 120px;
+  border: none;
+}
+.section #article_3 {
+  width: 80%;
+  height: 100%;
+  background: #ffffff;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  z-index: 555;
+  display: none;
+}
+.section #article_3 input {
+  text-overflow: ellipsis;
+  color: blue;
+  font-size: 12px;
+  font-weight: 700;
+  width: 160px;
+}
+.section #article_3 #some_3 img {
+  height: 100%;
+}
+.section #article_4 {
+  width: 80%;
+  height: 100%;
+  background: #ffffff;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  z-index: 555;
+  display: none;
+}
+.section #article_4 input {
+  border: none;
+  width: 300px;
+  outline: none;
+  background: transparent;
+  text-overflow: ellipsis;
+  color: red;
+  font-weight: 700;
+  font-size: 15px;
+}
+.section #article_4 #some_1 {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 28px;
+  left: 441px;
+}
+.section #article_4 #some_1 img {
+  height: 100%;
+}
+.section #article_5 {
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  z-index: 555;
+  display: none;
+}
+.section .footer {
+  width: 1200px;
+  height: 90px;
+  background: #ffffff;
+  font-size: 50px;
+  color: #000000;
+  text-align: center;
+  line-height: 90px;
+}

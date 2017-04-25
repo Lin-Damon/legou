@@ -1,0 +1,138 @@
+该文档为乐购网接口文档
+//
+注意事项
+1.使用所有接口都必须要引入bmob.js 、 bmob-min.js 、 legou-background.js
+示例:    *注意路径
+<script type="text/javascript" src="./js/bmob.js"></script>
+<script type="text/javascript" src="./js/bmob-min.js"></script>
+<script type="text/javascript" src="./js/legou-background.js"></script>
+2.在调用接口前，请在js中，调用LGB.init()，每个文件中只需要调用一次!请勿重复调用!
+3.所有接口都是采用回调函数的形式返回数据(成功回调和失败回调)，请将你的回调函数名称传入api中对应的位置，所有参数不可省略。
+
+
+接口列表：
+1.LGB.save = function(tableName,data,successFN,errorFN){};
+存储数据接口。
+tableName：表名，目前的tableName有三个值[Goods(商品信息表),HomeData(首页数据表),_User(用户表)],请勿使用其他表名
+data:要保存的数据，请使用json类型。
+成功回调中的参数为保存后的对象
+失败回调错误原因
+无返回值
+例如：
+var data = {
+	"name":"Simon",
+	"age":20,
+}
+LGB.init();
+LGB.save("Player",data,success,error);
+function success(obj)
+{
+	console.log("保存成功:",obj);
+}
+function error(error)
+{
+	console.log(error);
+}
+*我们在"Player"表中，保存了一条玩家数据。
+
+
+2.LGB.getDataByTableName = function(tableName,num,successFN,errorFN){};
+获取某张表数据的接口。
+num:要获取数据的数量，最少0条，最多1000条，大于1000当做1000处理
+成功回调获取到的的数据对象。
+失败回调错误原因。
+无返回值
+LGB.init();
+LGB.getDataByTableName("Goods",100,success,error);
+function success(obj)
+{
+	console.log("获取成功:",obj);
+}
+function error(error)
+{
+	console.log(error);
+}
+*获取到了"Goods"表中前一百条数据。
+
+
+3.LGB.uploadFile = function(id,name,successFN,errorFN){};
+上传文件接口。
+id:input标签的id。调用该接口即上传该input标签提交的文件.
+name:要保存的文件名
+成功回调上传后的文件
+无返回值
+/*HTML代码
+	<input type="file" id="file-control">
+*/
+LGB.init();
+LGB.uploadFile("file-control","test.jpg",success,error);
+回调略
+*将用户提交的文件以"test.jpg"保存到后台。
+
+
+
+4.LGB.microPic = function(data,successFN,errorFN){};
+获得缩略图接口
+data:设置缩略图的参数
+该data允许的属性值如下：
+mode:模式 0: 指定宽， 高自适应，等比例缩放
+     模式 1: 指定高， 宽自适应，等比例缩放
+     模式 2: 指定最长边，短边自适应，等比例缩放
+     模式 3: 指定最短边，长边自适应，等比例缩放
+     模式 4: 指定最大宽高， 等比例缩放
+     模式 5: 固定宽高， 居中裁剪    
+image:原图片url 必填
+width:宽度，模式 0, 4, 5必填
+height：高度，模式 1, 4, 5必填
+longEdge：长边，模式 2必填
+shortEdge：短边，模式 3必填
+quality：质量，选填, 范围 1-100
+outType：输出类型，0:默认，输出url；1:输出base64编码的字符串流
+成功回调生成的缩略图的url
+失败回调错误原因
+无返回值
+示例
+var data = {
+	"image":"http://www.baidu.com/cdn/2017/yytqiwyrfcuq2ui9y.jpg",
+	"mode":0,
+	"quality":100,
+	"width":100,
+}
+LGB.init();
+LGB.microPic(data,success,error);
+回调略
+
+5.LGB.queryByType = function(type,num,successFN,errorFN){};
+根据类型查找商品接口
+因为根据type类查找商品使用较多，单独封装一个接口
+type:商品类型,
+num:要获取数据的数量
+成功回调查找到的数据
+失败返回错误原因
+无返回值
+示例
+LGB.init();
+LGB.queryByType("衣服",100,success,error);
+*获取类型为衣服的前100条数据
+
+
+
+6.LGB.query = function(tableName,property,value,successFN,errorFN){};
+公共查找接口
+tableName:表名
+property:属性名
+value:值
+成功回调查找到的数据
+无返回值
+示例：
+LGB.init();
+LGB.query("Goods","price","199",success,error);
+*查找Goods表中价格为199的所有商品
+
+
+LGB.signUp = function(data,successFN,errorFN){};
+LGB.logIn = function(username,password,successFN,errorFN){};
+LGB.getCurrentUser = function(){};
+LGB.resetPassword = function (email,successFN,errorFN){};
+
+

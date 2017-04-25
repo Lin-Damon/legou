@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="type" placeholder="一级分类">
+	<input type="text" id="subtype" placeholder="二级分类">
+	<button id="btn" onclick="start()">开始</button>
+
+	<script type="text/javascript" src="js/bmob.js"></script>
+	<script type="text/javascript" src="js/bmob-min.js"></script>
+	<script type="text/javascript" src="js/legou-background.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+
+	<script type="text/javascript">
+		var type = document.getElementById("type");
+		var subtype = document.getElementById("subtype");
+		function start(){
+			console.log("开始");
+			requestData();
+		}
+		function requestData(){
+			var scr = document.createElement("script");
+			scr.type="text/javascript";
+			scr.src = "http://list.mogujie.com/search?callback=success&_mgjuuid=1e01205d-f983-463a-8a28-66a7e1193dda&sort=pop&cpc_offset=&cKey=pc-search-wall&page=1&userId=&ppath=&maxPrice=&minPrice=&ratio=2%3A3&_=1488797556766&q="+subtype.value;
+			document.body.appendChild(scr);
+		}
+		function success(data){
+			console.log("爬取第一个数据成功");
+			var docs = data.result.wall.docs;
+			for(var i = 0;i<docs.length;i++)
+			{
+				// console.log(docs[i]);
+				var firstData = docs[i];
+				var ID = firstData["tradeItemId"];
+				var jsondata = {};
+				jsondata.type = type.value||'';
+				jsondata.subtype = subtype.value||'';
+				jsondata.itemname = firstData.title;
+				jsondata.orgprice = firstData.orgPrice;
+				jsondata.price = firstData.price;
+				jsondata.coverimg = firstData.img;
+
+				// jsondata.size = ["34","35","36","37","38","39"]
+				jsondata.size = ["均码"]
+				jsondata.color = ["图色"];
+				
+				cont(ID,jsondata);
+			}
+			
+
+		}
+
+		function cont(ID,jsondata){
+			console.log("第一个数据解析完成，开始爬取第二个数据");
+			var jsondata = jsondata;
+			var xhr = new XMLHttpRequest();
+			var url = "agent.php?id="+ID;
+			xhr.open("get",url,true);
+			xhr.send(null);
+			xhr.onreadystatechange = function(){
+				if (this.readyState == 4) {
+					//可以解析服务器数据
+					if (this.status == 200) {
+						// console.log(this.responseText);
+						var secondData = JSON.parse(this.responseText);
+						jsondata.description = secondData.data.detailInfos.desc;
+						jsondata.detailimg = secondData.data.detailInfos.detailImage[0].list;
+						jsondata.set = secondData.data.itemParams.info.set;
+						// console.log(jsondata);
+						// console.log("爬取完成，开始上传数据");
+						upload(jsondata);
+					}
+					else
+					{
+						console.log(this.status);
+					}
+				}
+			}
+
+		}
+		function upload(data){
+			// console.log(data);
+			LGB.init();
+			LGB.save("Goods",data,succ,erro);
+		}
+		function succ(obj){
+			console.log("上传成功");
+			// console.log(obj);
+		}
+		function erro(error){
+			console.log(error);
+		}
+
+				
+
+
+
+
+	</script>
+</body>
+</html>

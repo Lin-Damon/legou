@@ -1,0 +1,108 @@
+			#big{
+				width: 80%;
+				margin: auto;
+				border: 5px solid red;
+				text-align: center;
+				position: relative;
+				background: #fff;
+			}
+			#center{
+				line-height: 40px;
+				padding: 20px;
+				width:70%;
+				margin: 0 auto;
+				text-align: left;
+				position: relative;
+			}
+			#center input{
+				display: inline-block;
+				height: 30px;
+			}
+			#center a{
+				display: inline-block;
+				width: 95px;
+			}
+			#txt{
+				display: inline-block;
+				height: 30px;
+				width: 167px;
+			}
+			span{
+				color: red;
+				font-size: 12px;
+			}
+			#in{
+				display: inline-block;
+				width: 175px;
+			}
+			#submit_3,#submit_1,#submit_2{
+				display: inline-block;
+				width: 50px;
+				height: 30px;
+				text-align: right;
+				text-align: center;
+				line-height: 30px;
+				cursor: pointer;
+				color: white;
+				background-color: gray;
+			}
+			#size{
+				width: 570px;
+			}
+			#size,#size input{
+				vertical-align: middle;
+			}
+			#menu{
+				width: 173px;
+				height: 35px;
+			}
+			#ins{
+				display: inline-block;
+				width: 175px;
+				height: 100%;
+			}
+			#some_3{
+				width: 300px;
+				height: 300px;
+				border: 1px solid gray;
+				position:absolute;
+				top:19px;
+				left:371px;
+			}
+			.box{
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			
+			#center .box .upload{
+				display: inline-block;
+				position: absolute;
+				border: none;
+				width: 100px;
+				height: 100px;
+			}
+			#center .box .hidden{
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				opacity: 0;
+				filter: alpha(opacity = 0);
+			}
+			#can{
+				position: absolute;
+				top: 215px;
+				right: 120px;
+				width: 200px;
+				height: 200px;
+				border: 1px solid grey;
+			}
+			#center .img{
+				position: absolute;
+				top: 19px;
+				left:296px;
+			}

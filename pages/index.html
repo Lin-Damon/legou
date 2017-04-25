@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--head头部导航栏-->
+		<div id="right_nav"></div>
+		<div id="head"></div>
+		<!--nav 搜索栏-->
+		<div id="nav">
+			<a href="#">
+				<img src="../img/logo.png"/>
+				<div >
+					<i>乐 购</i><br />
+					<i>每日快乐一购</i>
+				</div>
+			</a>
+			<div class="nav_content">
+				<div class="nav_content_top">
+					<!--search搜索框-->
+					<div class="search">
+						<div class="select">							
+								<span>搜商品</span>
+						</div>
+						<div id="top_nav_form">
+							<input type="text" class="search1" placeholder="夏季女士短袖" />
+							<input type="submit" value="搜 索" class="search2" />
+						</div>
+					</div>
+				</div>
+				<div class="nav_top_word">
+					
+				</div>
+			</div>
+			<div class="themeMarket">
+				<div>主题市场</div>
+				<a href="#">省钱团购</a>
+				<a href="#">品质优选</a>
+			</div>
+		</div>
+		<!--carousel轮播图-->
+		<div class="carousel">
+			<div class="left_nav"></div>
+			<div class="right_img">
+				<img src="../img/lunbo1.png" alt="三月踏青" class="img_ind" />
+				<img src="../img/lunbo2.png" alt="女神节" class="img_ind" />
+				<img src="../img/lunbo3.png" alt="美廋秘籍" class="img_ind"/>
+				<img src="../img/lunbo4.png" alt="女神节" class="img_ind" />
+				<img src="../img/lunbo5.png" alt="美瘦秘籍" class="img_ind"/>
+				
+			</div>
+			<div class="land">
+				<div class="landtop">
+					<img src="../img/headland.png"/>
+					<p>菇凉好!</p>
+					<p >欢迎来逛蘑菇街</p>
+					<div id="rightLogIn">登陆</div>
+					<a href="#">免费注册</a>
+					<a href="#">开小店</a>
+				</div>
+				<div class="landbottom ">
+					<p>好“裤”不将“旧”</p>
+					<p>春款五折起</p>
+					<img src="../img/land.png"  />
+				</div>
+			</div>
+			<div class="btn">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+		</div>
+		<!--favorable 优惠栏-->
+		<div id="favorable">
+			<div class="drug">
+					<b>限时快抢</b>
+					<div class="countdown"></div>
+					<img src="../img/drug.png"/>
+			</div>
+			<div class="oneyuan">
+				<div class="one_top">
+					<div class="left_word">
+						<p class="left_word_top">一元快抢</p>
+						<p class="left_word_bottom">整点抢好运</p>
+					</div>
+					<div class="picture">
+						<img src="../img/naifen.png"/>
+					</div>
+				</div>
+				<div class="one_bottom">
+					<div class="left_word">
+						<p class="left_word_top">一分钱抽奖</p>
+						<p class="left_word_bottom">幸运只需￥0.01</p>
+					</div>
+					<div class="picture">
+						<img src="../img/naifen.png"/>
+					</div>
+				</div>
+			</div>
+			<div class="groupbuy">
+				<p>团购特卖</p>
+				<p>10点特惠上新</p>
+				<div >
+					<img src="../img/skirt.png"/>
+				</div>
+			</div>
+			<div class="oneyuan">
+				<div class="one_top">
+					<div class="left_word">
+						<p class="left_word_top">品牌团</p>
+						<p class="left_word_bottom  time">00:00:00</p>
+					</div>
+					<div class="picture">
+						<img src="../img/naifen.png"/>
+					</div>
+				</div>
+				<div class="one_bottom">
+					<div class="left_word">
+						<p class="left_word_top">入仓质检</p>
+						<p class="left_word_bottom">劣一赔三</p>
+					</div>
+					<div class="picture">
+						<img src="../img/naifen.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!--红人穿搭栏-->
+	<div id="redman">
+		<div class="redtop">
+			<div class="redtopinner">
+				<span></span>
+				红人穿搭
+			</div>
+			<a href="#">查看全部> </a>
+		</div>
+	</div>
+	<!--special 精选专题栏-->
+	<div id="special">
+		<div class="special_top">
+			<span></span>精选专题
+		</div>
+		<div class="special_img_window">
+			<div class="special_img_out"></div>
+		</div>
+		<div class="left_right">
+			<div class="left"> < </div>
+			<div class="right"> > </div>
+		</div>
+	</div>
+	<!--底部-->
+	<div id="foot" style="position: absolute;bottom: -316px;"></div>
+	<script type="text/javascript" src="../js/bmob.js"></script>
+	<script type="text/javascript" src="../js/bmob-min.js"></script>
+	<script type="text/javascript" src="../js/legou-background.js"></script>
+	<script src="../js/Legou-top-button.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/offside_head_fixed.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="../css/Legou-top-button.css"/>
+	<script type="text/javascript">
+		//头部导航对象引用
+		var headnav =new LeguTop("head");
+		var footnav =new LeguButton("foot");
+		var right_nav=new Offside('right_nav');
+		// headnav.LeguTopStyle();
+		//判断用户登录
+		// LGB.init();
+		// var user = LGB.getCurrentUser();
+		// // console.log(user);
+		// if(!user){
+		//     console.log("还未登录");
+		// }
+		// else{
+		//     console.log("您好，"+user.getUsername());
+		//     headnav.Login_logout(user.getUsername(),"../login/person.html","注销","###");
+		// }
+		
+		right_nav.OffsideStyle();
+		var legouHeadFixed =new HeadFixed();
+		footnav.LeguButtonStyle();
+		//用Z-index的方法来体现轮播
+		var ind=2,i=0,z=0;//图片堆叠层数
+		var timer=null,timer2=null,timer3=null;//3个计时器初始化	
+		var a=[],b=[],n=[];
+		var angle=1;//图片整体翻转的次数
+		//将背景颜色的数组输入
+		var backcolor=['#e7e9a4','#d7e2f1','#fae6d4','#fc6f8a','#efd1e2']
+		carousel();
+			
+		function carousel(){
+		timer=setInterval(function(){
+			setcarousel();
+		},3000);
+		btncarousel();
+		visibleware();
+		switchimg();
+		}
+		
+		//改变堆叠层数的函数
+		function setcarousel(){
+			var carousel=document.getElementsByClassName('carousel')[0];
+			var btn=document.getElementsByTagName('i');
+			var img=document.getElementsByClassName('img_ind');				
+			for(var a=2;a<btn.length;a++){
+			btn[a].style.backgroundColor='';	
+			}			
+			if(i>=img.length){
+				i=0;
+				for(var a=0;a<img.length;a++){
+					img[a].style.zIndex=0;
+				}
+			}
+			btn[i+2].style.backgroundColor='red';
+			img[i].style.zIndex=ind;
+			carousel.style.backgroundColor=backcolor[i];
+			i++;		
+		}
+			
+		//按键绑定控制轮播图片
+		function btncarousel(){
+			var backcolor=['#e7e9a4','#d7e2f1','#fae6d4','#fc6f8a','#efd1e2']
+			var btn=document.getElementsByTagName('i');
+			var img=document.getElementsByClassName('img_ind');
+			var carousel=document.getElementsByClassName('carousel')[0];
+			for(var a=2;a<btn.length;a++){
+				btn[a].index=a;
+				btn[a].onclick=function(){
+					for(var b=0;b<img.length;b++){
+						btn[b+2].style.backgroundColor='';
+						
+						img[b].style.zIndex='';
+					}
+					
+					img[this.index-2].style.zIndex=ind;
+					carousel.style.backgroundColor=backcolor[this.index-2]
+					btn[this.index].style.backgroundColor='red'
+					
+					i=this.index-2;
+					 //console.log(i)	;
+				}
+			}
+		}
+		
+		//鼠标移到搜商品显示选择店铺还是商品
+		function visibleware(){
+			//创造节点
+			var ol=document.createElement('ol');
+			var select=document.getElementsByClassName('select')[0];
+			var sp=document.getElementsByTagName('span')[8];
+			//console.log(select)
+			ol.style.listStyle='none';
+			ol.style.margin=0;
+			ol.style.padding=0;
+			ol.style.paddingTop=5+'px';
+			select.appendChild(ol);
+			for(var i=0;i<2;i++){
+				var li=document.createElement('li');
+				li.className='ware';
+				ol.appendChild(li);				
+			}
+			var li=document.getElementsByClassName('ware')
+			li[0].innerText='商品';
+			li[1].innerText='店铺'
+			select.onmouseover=function(){
+				for(var i=0;i<2;i++){
+					li[i].style.display='block';
+				}
+			}
+			select.onmouseout=function(){
+				for(var i=0;i<2;i++){
+					li[i].style.display='none';
+				}
+			}
+			for(var i=0;i<2;i++){
+				li[i].index=i;
+				li[i].onmouseover=function(){
+					this.style.backgroundColor='Seashell';				
+				}
+				li[i].onmouseout=function(){
+					this.style.backgroundColor='white';				
+				}
+				li[i].onclick=function(){
+					sp.innerText='搜'+this.innerText;
+				}
+			}
+		}
+		
+		//获取优惠倒计时
+		window.onload=getcountdown();
+		function  getcountdown(){
+			var countdown=document.getElementsByClassName('countdown')[0];
+			timer2=setInterval(function(){
+			var  time=new Date();
+			var  h=time.getHours();
+			var  m=time.getMinutes();
+			var  s=time.getSeconds();
+			if(h>15){
+				h='0'+(24-h);
+			//	console.log(h)
+				countdown.innerHTML=h+':'+(60-m)+':'+(60-s);
+			}
+			else{
+				countdown.innerHTML=(24-h)+':'+(60-m)+':'+(60-s);
+			}
+			},100)	
+		}
+		//给红人穿搭里面塞图片
+//		setimg();
+		function  setimg(data){
+			//创建DIV
+			var redman=document.getElementById('redman');
+			for(var i=0;i<5;i++){
+				var redmandiv=document.createElement('div');
+				redmandiv.className='redmandiv';
+				redman.appendChild(redmandiv);
+			//	console.log(redmandiv)
+			}
+			//创建图片数
+			//console.log(document.getElementsByClassName('redmandiv'))
+			for(var i=0;i<10;i++){
+				var img=document.createElement('img');
+				var title=document.createElement('div');
+				img.className='redmanimg';
+				title.className='title';
+				//console.log(data)
+				img.src=img.src=data[i].img;
+				//console.log(img.src)
+//				img.src=data[i].img;
+//				console.log(data)
+				title.innerText=data[i].title;
+				if(i%2!=0&&i!=0){
+					img.style.transform='translateZ(-1px) rotateY(180deg)';
+					title.style.transform='translateZ(-3px) rotateY(180deg)';
+				}
+				a.push(img);
+				b.push(title);
+			}//console.log(a);
+			//获取并存放位置
+			var redmandiv=document.getElementsByClassName('redmandiv');
+			var redmanimg=document.getElementsByClassName('redmanimg');
+			//console.log(redmandiv)
+			redmandiv[0].appendChild(a[0]);
+			redmandiv[0].appendChild(a[1]);
+			redmandiv[1].appendChild(a[2]);
+			redmandiv[1].appendChild(a[3]);
+			redmandiv[2].appendChild(a[4]);
+			redmandiv[2].appendChild(a[5]);
+			redmandiv[3].appendChild(a[6]);
+			redmandiv[3].appendChild(a[7]);
+			redmandiv[4].appendChild(a[8]);
+			redmandiv[4].appendChild(a[9]);
+			redmandiv[0].appendChild(b[0]);
+			redmandiv[0].appendChild(b[1]);
+			redmandiv[1].appendChild(b[2]);
+			redmandiv[1].appendChild(b[3]);
+			redmandiv[2].appendChild(b[4]);
+			redmandiv[2].appendChild(b[5]);
+			redmandiv[3].appendChild(b[6]);
+			redmandiv[3].appendChild(b[7]);
+			redmandiv[4].appendChild(b[8]);
+			redmandiv[4].appendChild(b[9]);
+			timer3=setInterval(function(){
+				redmandiv[z].style.transform='rotateY('+angle*180+'deg)';
+				z++;
+				if(z> 4){
+					angle++;//图片翻转轮数
+					z=0;
+					//console.log(angle)
+				}
+			},5000)
+		}
+		//精选专栏插入图片
+		function  special_img(data){
+			var c=[],d=[];
+			//创建15个DIV用来存放图片与价格行标签
+			var special_img_out=document.getElementsByClassName('special_img_out')[0];
+			for(var i=0;i<15;i++){
+				//创建15个DIV的同时在里面每个再创建个DIV存放作者头像与文字
+				var special_div=document.createElement('div');
+				var special_div_div=document.createElement('div');
+				//每个special_div_div里面在放个img和i
+				var special_div_div_img=document.createElement('img');
+				var special_div_div_i=document.createElement('i');
+				//赋予类名的属性
+				special_div.className='special_img_inner';
+				special_div_div.className='special_img_inner_content';
+				special_div_div_img.className='special_div_div_img';
+				special_div_div_i.innerText=data[i].author;
+				//并入个自的父级
+				special_img_out.appendChild(special_div);
+				special_div.appendChild(special_div_div);
+				special_div_div.appendChild(special_div_div_img);
+				special_div_div.appendChild(special_div_div_i);
+				special_div_div_img.src=data[i].authorimg;
+				
+				c.push(special_div);
+				//每个DIV里面放5个图片,并存放在D数组里
+				for(var n=0;n<5;n++){
+					var special_div_img=document.createElement('img');
+					special_div_img.className='special_div_img';
+					special_div.appendChild(special_div_img);
+					d.push(special_div_img);
+				}
+				//15个div里每个DIV里面的4个小图片给与SRC路径及其价格
+				for(var q=2;q<6;q++){
+					var span=document.createElement('span');
+					span.className='special_div_span';
+					special_div.appendChild(span);
+					c[i].getElementsByTagName("span")[q-2].innerText='￥'+data[i].goods[q-2].price;
+					c[i].getElementsByTagName("img")[q].src=data[i].goods[q-2].img;	
+				}
+			}
+				//15个div里每个DIV里面的1个大图片，方法是在D数组里取出下标数为5的倍数的img给与类名
+				for(var i=0;i<d.length;i++){
+					if(i%5==0||i==0){
+						d[i].className='special_div_oneimg';
+						d[i].src=data[i/5].titleimg;						
+					}else{
+//						console.log(i)
+						d[i].style.margin='0 4px';						
+					}
+				}
+		}
+		
+		//点击左右切换专题图片
+		function switchimg(){
+		var special=document.getElementById('special');
+		var special_img_window=document.getElementsByClassName('special_img_window')[0]; 
+		var left=document.getElementsByClassName('left')[0]; 
+		var right=document.getElementsByClassName('right')[0]; 
+		var left_right=document.getElementsByClassName('left_right')[0];
+		var m=null,timer4=null,timer5=null;
+		//每隔6秒自己翻页，m代表页数，
+		timer4=setInterval(function(){
+			m = parseInt(special_img_window.scrollLeft/special_img_window.offsetWidth)||0;
+			m++;
+			if(m>4){
+				m=0;
+			}
+			special_img_window.scrollLeft=special_img_window.offsetWidth*m;
+		//	console.log(m,special_img_window.scrollLeft)
+		},6000);
+		//隐藏和显示左右键
+		special.onmouseover=function(){
+			left_right.style.display='block'
+		}
+		special.onmouseout=function(){
+			left_right.style.display='none'
+		}
+		//左键点击效果
+		left.onclick=function(){
+			clearInterval(timer4);
+			clearTimeout(timer5);
+			m = parseInt(special_img_window.scrollLeft/special_img_window.offsetWidth)||0;
+			//console.log("bf  "+index,special_img_window.scrollLeft);
+			m--;
+			if(m<0){
+				m=4;
+			}
+			special_img_window.scrollLeft=special_img_window.offsetWidth*m;
+			//console.log(index,special_img_window.scrollLeft);
+			timer5 = setTimeout(switchimg,1000);
+		}
+		//右键点击效果
+		right.onclick=function(){
+			clearInterval(timer4);
+			clearTimeout(timer5);
+			 m = parseInt(special_img_window.scrollLeft/special_img_window.offsetWidth);
+			m++;
+			if(m>4){
+				m=0;
+			}
+			special_img_window.scrollLeft=special_img_window.offsetWidth*m;
+			timer5 = setTimeout(switchimg,1000);
+			//console.log(m)
+		}	
+		}
+		function hotsearchpen(other,phase,backcolor){
+			var ph=other[phase];
+			//创建段落DIV放入Body极其内容排版
+			//头部的部分
+			var body=document.getElementsByTagName('body')[0];
+			var div=document.createElement('div');
+			div.className='hotsearch';
+			body.appendChild(div);
+			var top_div=document.createElement('div');
+			var span=document.createElement('span');
+			var p=document.createElement('p');
+			var i=document.createElement('i');
+			var ol=document.createElement('ol');				
+			top_div.className='top_div';
+			div.appendChild(top_div);
+			span.className='top_div_span';
+			span.style.backgroundColor=backcolor;
+			top_div.appendChild(span);
+			p.className='top_div_p';
+			p.innerText=ph.title;
+			top_div.appendChild(p);
+			i.innerText='热门搜索:';
+			top_div.appendChild(i);
+			ol.style.display='inline-block';
+			top_div.appendChild(ol);							
+			for(var i=0;i<5;i++){
+			var li=document.createElement('li');
+			var b=document.createElement('b');
+			var a=document.createElement('a');
+				li.className='ol_li';
+				b.innerText='|';
+				a.innerText=ph.hot[i];
+				a.href='#';
+				a.style.color='black'
+				ol.appendChild(li);
+				ol.appendChild(b);
+				li.appendChild(a);
+			}	
+				//下面图片的部分
+			var div_foot=document.createElement('div');
+			div_foot.className='div_foot';
+			div.appendChild(div_foot);				
+			for(var i=0;i<6;i++){
+			var div_foot_div=document.createElement('div');
+			var div_foot_div_top=document.createElement('p');
+			var div_foot_div_centent=document.createElement('p');
+			var div_foot_div_img=document.createElement('img');
+			div_foot_div.className='div_foot_div';
+			div_foot.appendChild(div_foot_div);
+			div_foot_div_top.className='div_foot_div_top';
+			div_foot_div_top.innerText=ph.goods[i].title;
+			div_foot_div.appendChild(div_foot_div_top);
+				
+			div_foot_div_centent.className='div_foot_div_centent';
+			div_foot_div_centent.innerText=ph.goods[i].subtitle;
+			div_foot_div.appendChild(div_foot_div_centent);
+				
+			div_foot_div_img.className='div_foot_div_img';
+			div_foot_div_img.src=ph.goods[i].img;
+			div_foot_div.appendChild(div_foot_div_img);
+			}				
+		}
+		//热搜hotsearch的三个段落
+		function hotsearch(other){
+			//console.log(other);
+			hotsearchpen(other,0,"pink");
+			//hotsearchpen(0);
+			hotsearchpen(other,1,"#9f86cf");
+			hotsearchpen(other,2,"skyblue");
+		}
+		
+		function  leftnav(data){			
+			var leftnav=document.getElementsByClassName('left_nav')[0];
+			for(var i=0;i<9;i++){
+				//console.log(i)
+				var ul=document.createElement('ul');
+				ul.className='leftnav_ul';
+				leftnav.appendChild(ul);
+				for(var n=0;n<4;n++){
+					var li=document.createElement('li');
+					var a=document.createElement('a');
+					li.className='leftnav_ul_li';
+					a.href='#';
+					a.className='leftnavtext';
+					a.innerText=data[i].sub[n];
+					if(i==5){
+						a.innerText=data[i].sub[n+1];
+					}
+					if(i==8){
+						a.innerText=data[i].sub[n-1];
+						if(n==3){
+							a.innerText=data[i].sub[n];
+						}
+						//console.log(data[i].sub[n+2])
+					}
+					if(n==0){
+						a.innerText=data[i].type;
+						a.style.fontWeight='bold';
+						a.style.fontSize='16'+'px';
+					}
+					ul.appendChild(li);
+					li.appendChild(a);
+				}
+			}
+            var  aa=document.getElementsByTagName('a');
+           	for(var i=12;i<49;i++){
+	           	aa[i].index=i;
+	           	aa[i].onclick=function(){
+	           		var keyword1=this.innerText;
+	           		searchByKeyWord(keyword1);
+	           	}
+           	}
+		}
+		
+		function setSearcha(data){
+			c=[];
+			
+			var navwork=document.getElementsByClassName('nav_top_word')[0];
+			for(var i=0;i<data.length;i++){
+				var a=document.createElement('a');
+				a.className='nav_a';
+				a.innerText=data[i].sub[data.length-4];
+				a.href='#';
+				navwork.appendChild(a);
+				c.push(a)
+			}
+			for(var n=0;n<data.length;n++){
+				c[n].addEventListener('click',function(){
+					var keyword=this.innerText;
+					searchByKeyWord(keyword);
+				},false);
+				
+			}
+		}
+
+		//传值。。传搜索值
+		var search2=document.getElementsByClassName('search2')[0];
+		var search1=document.querySelector('.search1');
+		search2.onclick=function(){
+			var kw = search1.value;
+			if (kw) {
+				searchByKeyWord(kw);
+			}
+		}
+		document.onkeypress=inputSearch;
+		function  inputSearch(e){
+			var e=e||window.event;
+			if(e.keyCode == 13 && search1.value){
+				searchByKeyWord(search1.value);
+			}
+		}
+		LGB.init();
+		LGB.getDataByTableName("HomeData",1,success,error);
+		function success(obj)
+		{
+			var ites=obj[0]._serverData.hotwear;
+			var set_img=obj[0]._serverData.selection;
+			var other=obj[0]._serverData.other;
+			//console.log(set_img)
+			setimg(ites);
+			special_img(set_img);
+			hotsearch(other);
+		}
+		function error(error)
+		{
+			console.log(error);
+		}
+		
+		LGB.getAllType(mysuccess,myerror);
+		function mysuccess(data){
+			var ln=data;
+			console.log(data)
+			leftnav(ln);
+			setSearcha(ln);
+		}
+		function myerror(error){
+		console.log("出错了,"+error)
+		}
+		function searchByKeyWord(keyword){
+			var keyword = encodeURI(keyword);
+				window.open('./search.html?keyword='+keyword,'_self');
+		}
+		</script>
+
+	</body>
+</html>

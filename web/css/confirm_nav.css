@@ -1,0 +1,319 @@
+#content{
+	margin: 30px auto 20px;
+	width: 1200px;
+	position: relative;
+	/*background-color: white;*/
+}
+/* 乐购logo栏 */
+#cart_flow{
+	width: 100%;
+	border: 1px solid #DDDDDD;
+}
+.cf_header{
+	overflow: hidden;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	position: relative;
+}
+/* 乐购logo */
+.logo{
+	float: left;
+	width: 150px;
+	height: 60px;
+}
+.logo_pic{
+	width: 100%;
+}
+/* 购物进度条 */
+.shoppingFlow{
+	float: right;
+	overflow: hidden;
+}
+.shoppingFlow div{
+	float: left;
+}
+.rate{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: rgb(221,221,221);
+	color: white;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 10px;
+}
+.row{
+	width: 60px;
+	height: 5px;
+	background-color: rgb(221,221,221);
+	margin-top: 20px;
+}
+.shoppingFlow div:nth-child(1){
+	background-color: orange;
+}
+.shoppingFlow div:nth-child(3){
+	background-color: orange;
+}
+
+.forOne{
+	position: absolute;
+	right: 427px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forTwo{
+	position: absolute;
+	right: 273px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forThree{
+	position: absolute;
+	right: 143px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forfour{
+	position: absolute;
+	right: -2px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+
+/* 确认订单 */
+.confirm_nav{
+	/*display: none;*/
+}
+.confirm_ul{
+	overflow: hidden;
+	margin: 0;
+	padding: 0 0 20px 0;
+	background-color: #F2F2F2;
+}
+.confirm_ul li{
+	list-style: none;
+	float: left;
+	display: list-item;
+}
+.confirm_ul li a{
+	text-align: center;
+	text-decoration: none;
+	padding: 0 10px;
+	margin-right: 10px;
+	height: 28px;
+	display: inline-block;
+}
+
+.cart_wrap{
+	width: 1200px;
+	/*height: 265px;*/
+	background: white;
+	border-bottom: 1px solid #F2F2F2;
+}
+.cart_wrap_page{
+	padding: 0 20px 20px 20px;
+	background: white;
+	font-size: 15px;
+}
+.header_wrap{
+	padding: 0 0 0 20px;
+}
+.hw_ul{
+	border-bottom: 1px solid #F2F2F2;
+	padding: 10px 0px 15px 10px;
+}
+.hw_ul li{
+	display: inline-block;
+	width: 140px;
+}
+.hw_ul li:nth-child(1){
+	width: 55px;
+}
+.hw_ul li:nth-child(2){
+	width: 460px;
+	text-align: center;
+}
+.hw_ul li:nth-child(5){
+	width: 125px;
+}
+.hw_ul li:nth-child(6){
+	width: 150px;
+}
+.hw_ul li:last-child{
+	width: auto;
+}
+.shop_wrap{
+	font-size: 15px;
+	color: #333333;
+	padding: 30px 0 15px 10px;
+	border-bottom: 1px solid #F2F2F2;
+}
+.shop_wrap .shop_name{
+	text-decoration: none;
+	font-size: 14px;
+	margin-left: 5px;
+}
+.about_goods{
+	padding: 20px 0 0 10px;
+	list-style: none;
+	font-size: 14px;
+}
+.about_goods_li{
+	overflow: hidden;
+	border-bottom: 1px solid #F2F2F2;
+	padding-bottom: 10px;
+	/*background-color: pink;*/
+}
+/*.about_goods_li div{
+	height: 100px;
+	float: left;
+}*/
+.check{
+	width: 55px;
+	line-height: 100px;
+	text-align: left;
+	height: 100px;
+	float: left;
+}
+.pic{
+	width: 465px;
+	display: flex;
+	height: 100px;
+	float: left;
+}
+.goods_pic{
+	width: 80px;
+	height: 80px;
+}
+.pic_src{
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-decoration: none;
+	vertical-align: top;
+}
+.about{
+	width: 145px;
+	height: 100px;
+	float: left;
+}
+.about_span{
+	display: inline-block;
+	margin-top: 25px;
+}
+.price{
+	width: 100px;
+	padding-left: 20px;
+	height: 100px;
+	float: left;
+}
+.cost{
+	color: #999999;
+	text-decoration: line-through;
+}
+.dis_cost{
+	font-size: 15px;
+	font-weight: bold;
+}
+.discount{
+	font-size: 15px;
+	font-weight: bold;
+	color: orange;
+}
+.goods_num{
+	width: 140px;
+	display: flex;
+	padding-right: 20px;
+	height: 100px;
+	float: left;
+}
+.reduce,.add{
+	width: 25px;
+	height: 25px;
+	background: white;
+	border: 1px solid #F2F2F2;
+	color: #999999;
+	font-size: 15px;
+	font-weight: bold;
+}
+.much{
+	width: 40px;
+	height: 23px;
+	border: 1px solid #F2F2F2;
+	text-align: center;
+}
+.sum{
+	width: 100px;
+	padding-right: 40px;
+	height: 100px;
+	float: left;
+}
+.pay{
+	color: orange;
+	font-size: 20px;
+}
+.ctrl{
+	width: 60px;
+	text-align: center;
+	height: 100px;
+	float: left;
+}
+.del{
+	background: transparent;
+	border: none;
+}
+.cart_wrap_footer{
+	padding: 0 0 0 20px;
+	background: white;
+	height: 50px;
+	overflow: hidden;
+}
+.footer_left{
+	padding-left: 10px;
+	display: inline-block;
+	line-height: 50px;
+}
+.dayout{
+	list-style: none;
+	overflow: hidden;
+}
+.dayout li{
+	font-size: 14px;
+	float: left;
+	padding-right: 20px;
+}
+.footer_right{
+	overflow: hidden;
+	float: right;
+	font-size: 14px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+.bitch{
+	color: orange;
+	vertical-align: middle;
+	
+}
+.money{
+	font-size: 25px;
+	font-weight: bold;
+	color: red;
+	vertical-align: middle;
+}
+.pay_btn{
+	width: 150px;
+	height: 50px;
+	vertical-align: middle;
+	font-size: 20px;
+	border: none;
+	color: white;
+	/*font-weight: bold;*/
+	background-color: red;
+}

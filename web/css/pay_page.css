@@ -1,0 +1,373 @@
+#content{
+	margin: 30px auto 20px;
+	width: 1200px;
+	position: relative;
+	/*background-color: white;*/
+}
+/* 乐购logo栏 */
+#cart_flow{
+	width: 100%;
+	border: 1px solid #DDDDDD;
+}
+.cf_header{
+	overflow: hidden;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 10px 0;
+	position: relative;
+}
+/* 乐购logo */
+.logo{
+	float: left;
+	width: 150px;
+	height: 60px;
+}
+.logo_pic{
+	width: 100%;
+}
+/* 购物进度条 */
+.shoppingFlow{
+	float: right;
+	overflow: hidden;
+}
+.shoppingFlow div{
+	float: left;
+}
+.rate{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background-color: rgb(221,221,221);
+	color: white;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 10px;
+}
+.row{
+	width: 60px;
+	height: 5px;
+	background-color: rgb(221,221,221);
+	margin-top: 20px;
+}
+.shoppingFlow div:nth-child(1){
+	background-color: orange;
+}
+.shoppingFlow div:nth-child(3){
+	background-color: orange;
+}
+.shoppingFlow div:nth-child(4){
+	background-color: orange;
+}
+.shoppingFlow div:nth-child(5){
+	background-color: orange;
+}
+.shoppingFlow div:nth-child(7){
+	background-color: orange;
+}
+.forOne{
+	position: absolute;
+	right: 427px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forTwo{
+	position: absolute;
+	right: 273px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forThree{
+	position: absolute;
+	right: 143px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+.forfour{
+	position: absolute;
+	right: -2px;
+	top: 52px;
+	color: #999999;
+	font-size: 14px;
+}
+
+/* 支付页面 */
+.pay_page{
+	/*display: none;*/
+	padding: 0 20px;
+	background-color: white;
+	border-bottom: 1px solid #F2F2F2;
+}
+
+/* 显示地址 */
+.show_address{
+	/*display: none;*/
+}
+.address_div{
+	display: inline-block;
+	width: 200px;
+	height: 100px;
+	font-size: 14px;
+	padding: 15px;
+	border: 1px dashed ;
+	border-radius: 20px;
+	vertical-align: top;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.forName{
+	display: block;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #999999;
+}
+.forStreet{
+	padding-right: 5px;
+}
+.forHome{
+	padding-right: 5px;
+}
+
+.add_address{
+	/*display: none;*/
+}
+.pay_page h4{
+	padding: 10px 0;
+}
+.address_page{
+	font-size: 14px;
+	padding: 15px 10px;
+}
+.address_page a{
+	text-decoration: none;
+}
+.newAddress{
+	margin-left: 20px;
+}
+.writeAddress{
+	padding: 15px 0;
+	display: none;
+}
+.address_ul{
+	list-style: none;
+	padding-left: 30px;
+	font-size: 14px;
+}
+.address_ul li{
+	margin-bottom: 20px;
+}
+.address_ul li i{
+	color: orange;
+}
+.fs{
+	display: inline-block;
+	/*background-color: pink;*/
+	width:90px;
+	text-align: right;
+}
+.province,.city,.district{
+	width: 150px;
+}
+.ofs{
+	padding-left: 10px;
+}
+.codeNum,.receiver,.tel{
+	height: 25px;
+	outline: none;
+}
+.codeSp{
+	display: none;
+	color: orange;
+}
+.strSp{
+	display: none;
+	color: orange;
+	padding-left: 105px;
+}
+.recSp{
+	display: none;
+	color: orange;
+}
+.telSp{
+	display: none;
+	color: orange;
+}
+.street{
+	vertical-align: top;
+	width: 800px;
+	height: 80px;
+	outline: none;
+}
+.address_ul li:last-child{
+	padding-left: 105px;
+}
+.conf_btn{
+	width: 100px;
+	height: 40px;
+	background-color: #FFA500;
+	border: none;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+}
+.cencel_btn{
+	width: 70px;
+	height: 40px;
+	margin-left: 5px;
+	border: 1px solid #DDDDDD;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: white;
+}
+.massage_header{
+	padding: 15px 0;
+	border-top: 1px solid #F2F2F2;
+}
+.massage_ul{
+	list-style: none;
+	overflow: hidden;
+	font-size: 14px;
+}
+.massage_ul li{
+	float: left;
+	width: 185px;
+}
+.massage_ul li:nth-child(1){
+	width: 550px;
+	text-align: center;
+}
+.massage_ul li:last-child{
+	width: auto;
+}
+
+.massage_shop{
+	padding: 30px 0 15px 0;
+	font-size: 14px;
+	border-top: 1px solid #F2F2F2;
+}
+.massage_center{
+	font-size: 14px;
+	background-color: #F2F2F2;
+}
+.mc_header{
+	border-bottom: 1px solid #DDDDDD;
+	padding: 10px 0 10px 10px;
+}
+.mc_header .mch_ul{
+	list-style: none;
+	overflow: hidden;
+}
+.mc_header .mch_ul li{
+	float: left;
+}
+.mc_same{
+	width: 140px;
+}
+.mc_pic{
+	display: flex;
+	width: 530px;
+}
+.goods_pic{
+	width: 80px;
+	height: 80px;
+}
+.pic_src{
+	display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    vertical-align: top;
+}
+.mc_about{
+	width: 200px;
+}
+.mc_price{
+	width: 190px;
+}
+.mc_price .mcc{
+	/*padding-left: 25px;*/
+	font-weight: bold;
+}
+.mc_num{
+	width: 170px;
+}
+.mc_num .mcn{
+	/*padding-left: 20px;*/
+}
+.mc_benefit{
+	width: 165px;
+}
+.massage_ps{
+	padding: 20px 0 20px 10px;
+	font-size: 14px;
+	border-bottom: 1px solid #DDDDDD;
+	background-color: #F2F2F2;
+}
+.ps_inp{
+	width: 350px;
+}
+.massage_footer{
+	padding: 15px 0;
+	text-align: right;
+}
+.massage_footer{
+	background-color: #F2F2F2;
+}
+.heji{
+	color: #999999;
+}
+.mfsum{
+	color: red;
+	font-size: 18px;
+	font-weight: bold;
+}
+.pay_page_footer{
+	margin-top: 20px;
+	height: 50px;
+	overflow: hidden;
+	border-top: 1px solid #DDDDDD;
+}
+.ppf_left{
+	float: left;
+}
+.backCartBtn{
+	width: 20px;
+	vertical-align: middle;
+}
+.backCarta{
+	text-decoration: none;
+	vertical-align: middle;
+	line-height: 50px;
+}
+.ppf_right{
+	float: right;
+}
+.ppfr_ul{
+	list-style: none;
+}
+.ppfr_ul li{
+	float: left;
+	line-height: 50px;
+}
+.payAllMoney{
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+.confirPay_btn{
+	height: 50px;
+	width: 150px;
+	vertical-align: middle;
+	background-color: orange;
+	border: none;
+	color: white;
+	font-size: 18px;
+}
+

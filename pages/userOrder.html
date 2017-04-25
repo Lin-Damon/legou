@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>我的订单</title>
+		<link rel="stylesheet" type="text/css" href="css/Legou-top-button.css"/>
+		<link rel="stylesheet" type="text/css" href="css/orderstyle.css"/>
+	</head>
+	<body>
+		<div id="get_offside"></div>
+		<div id="leguhead"></div>
+		<div id="nav">
+			<div class="nav_auto">
+				<a href="#">
+					<img src="img/logo.png"/>
+				</a>
+				<div class="nav_content">
+					<div class="nav_content_top">
+						<!--search搜索框-->
+						<div class="search">
+							<div class="select">							
+									<span>搜商品</span>
+							</div>
+							<div id="top_nav_form">
+								<input type="text" class="search1" placeholder="夏季女士短袖" />
+								<input type="submit" value="搜 索" class="search2" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="legu_getorder">
+			<div class="le_left_warp">
+				<div class="le_my_order">
+					<div id="le_my_user">
+						<img src="##"/>
+						<span ></span>
+					</div>
+					<h3>我的订单</h3>
+				</div>
+			</div>
+			<div class="le_right_warp">
+				<div class="order-title">
+					<ul class="order-title-column">
+						<li class="goods">商品</li>
+						<li class="price">单价（元）</li>
+						<li class="quantity">数量</li>
+						<li class="aftersale">售后</li>
+						<li class="total">实付款（元）</li>
+						<li class="status">交易状态</li>
+						<li class="other">操作</li>
+					</ul>
+				</div>
+				<div id="order_form">
+				</div>
+			</div>
+		</div>
+		<div id="legubutton">
+			
+		</div>
+		<script src="js/Legou-top-button.js" type="text/javascript"></script>
+		<script src="js/offside_head_fixed.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/bmob-min.js"></script>
+		<script type="text/javascript" src="js/bmob.js"></script>
+		<script type="text/javascript" src="js/city.js"></script>
+		<script type="text/javascript" src="js/legou-background.js"></script>
+		<script type="text/javascript">
+			var a =new LeguTop(leguhead);
+			a.LeguTopStyle();
+			//获取当前用户
+			LGB.init();
+			var user = LGB.getCurrentUser();
+			if(!user){
+			    console.log("还未登录");
+			}
+			else{
+			    console.log("您好，"+user.getUsername());
+			    a.Login_logout(user.getUsername(),"../login/person.html","注销","###");
+			}
+			a.Lgougouwu("../home_page/legou.html");
+			var b =new LeguButton(legubutton);
+			b.LeguButtonStyle();//底部
+			var c =new Offside("get_offside","###","###","###","###");
+			//侧边栏用户头像
+			var aaa=LGB.getCurrentUser().attributes.favaicon;
+			c.OffsideStyle();
+			c.OffsideEntry(aaa,"../login/person.html");
+		</script>
+		<!--搜索值-->
+		<script type="text/javascript">
+			var search2=document.getElementsByClassName('search2')[0];
+			var search1=document.querySelector('.search1');
+			search2.onclick=function(){
+				var keyword = encodeURI(search1.value);
+				console.log("value"+keyword,search1);
+				window.open('../mashroomStreet/search.html?keyword='+keyword);
+			}
+		</script>
+		<!--订单表获取数据-->
+		<script type="text/javascript">
+			var legouuser =document.getElementById("le_my_user");
+			var uesrimg =legouuser.getElementsByTagName("img")[0];
+			var uesrname = legouuser.getElementsByTagName("span")[0];
+			uesrimg.src=aaa;
+			uesrname.innerText=user.getUsername();
+			uesrname.style.fontSize="12px";
+		</script>
+		<!--获取订单数据-->
+		<script type="text/javascript">
+			LGB.init();
+			LGB.getDataByTableName("Order",100,success,error);
+			function success(obj)
+			{
+			    console.log("获取成功:",obj);
+//			    getorder(obj)
+			}
+			function error(error)
+			{
+			    console.log(error);
+			}
+		</script>
+		<script type="text/javascript">
+			function getorder(data){
+//				var user = LGB.getCurrentUser();
+//				var orders = user.attributes.order||[];
+				var ordercen={
+					ordernums:"1101101100",
+					times:"2017-3-18",
+					imgsrcs:"###", 
+					titles:"商品标题标题",
+					sizes:"xl",
+					colors:"绿色",
+					orig:"199",
+					alos:"99",
+					getnums:"2",
+					payment:"198",
+				}
+//				orders.push(ordercen);
+				var orderform =document.getElementById("order_form");
+				for (var i = 0;i<3;i++){
+					console.log(i);
+					var ordertable =document.createElement("table");
+					orderform.appendChild(ordertable);
+					ordertable.className="orderform";
+					//第一个tdtitle的内容
+					ordertable.innerHTML="<tr class='ordertr1'><td class='ordertr1_td' colspan='7'><span>订单编号："+ordercen.ordernums+"</span><span>成交时间："+ordercen.times+"</span><span>店铺名称：orderme</span></td></tr><tr class='ordertr2'></tr>"
+					//第二个tr创建7个td
+					
+					var ordertr2=document.getElementsByClassName("ordertr2")[i];
+					for(var j=0;j<7;j++){
+						var ordertr2_td=document.createElement("td");
+						ordertr2.appendChild(ordertr2_td);
+					}
+					var getordertr2_td =ordertr2.getElementsByTagName("td");
+					getordertr2_td[0].className="goods";
+					getordertr2_td[0].innerHTML="<div><img src="+ordercen.imgsrcs+" alt='商品图片'></div><div><a href='###'>"+ordercen.titles+"</a><span>尺码："+ordercen.sizes+"</span><span>颜色："+ordercen.colors+"</span></div>";
+					getordertr2_td[1].className="price";
+					getordertr2_td[1].innerHTML="<s>"+ordercen.orig+"</s></br><span>"+ordercen.alos+"</span>";
+					getordertr2_td[2].className="quantity";
+					getordertr2_td[2].innerHTML="<span>"+ordercen.getnums+"</span>";
+					getordertr2_td[3].className="aftersale";
+					getordertr2_td[3].innerHTML="<span>退货/退款</span></br><span>申请维权</span>";
+					getordertr2_td[4].className="total";
+					getordertr2_td[4].innerHTML="<span>¥"+ordercen.payment+"</span>";
+					getordertr2_td[5].className="status";
+					getordertr2_td[5].innerHTML="<span>已发货</span>";
+					getordertr2_td[6].className="other";
+					getordertr2_td[6].innerHTML="<span>确定发货</span>";
+				}
+			}
+			getorder();
+//				document.body.removeChild(document.querySelector("#jsonp"));
+//			}
+//			function closewindow(){  
+            //opener可以获取、设置通过window.open()打开此页面的父页面的值  
+//          var gmcg=document.getElementById("gmcg");
+//          var gmcg2=document.getElementById("gmcg2");
+//          console.log(gmcg);
+//          console.log(gmcg2);
+//          gmcg2.innerText=window.opener.gmcg.value;
+//          opener.document.myform.district.value = document.myform.district.value;  
+//          opener.document.myform.street.value = document.myform.street.value;  
+//          window.close();  
+//      }  
+//      closewindow();
+		</script>
+	</body>
+</html>
